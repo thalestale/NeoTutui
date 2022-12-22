@@ -1,0 +1,74 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+_global_script_classes=[{
+"base": "Object",
+"class": &"SceneManagerConstants",
+"language": &"GDScript",
+"path": "res://addons/scene_manager/SceneManagerConstants.gd"
+}]
+_global_script_class_icons={
+"SceneManagerConstants": ""
+}
+
+[application]
+
+config/name="Neo Tutui"
+config/features=PackedStringArray("4.0", "GL Compatibility")
+config/icon="res://icon.svg"
+
+[autoload]
+
+ControlesFixos="*res://core/ControlesFixos.gd"
+Anima="*res://ui/Anima.gd"
+Som="*res://core/Som.tscn"
+
+[dialogic]
+
+editor/character_preview_mode=0
+editor/current_editor=&"Settings"
+editor/current_resources={
+"Timeline Editor": "res://cenas/Teste/Dialogos/Teste.dtl"
+}
+save/autosave_delay=60.0
+glossary/default_case_sensitive=true
+choices/autofocus_first=true
+choices/delay=0.2
+text/speed=0.01
+text/skippable=true
+text/autocontinue_delay=1.0
+history/history_system=true
+history/full_history=true
+history/text_history=true
+animations/join_default_length=0.5
+animations/leave_default_length=0.5
+animations/leave_default_wait=true
+animations/join_default_wait=true
+variables={}
+editor/current_timeline_path="res://cenas/Teste/Dialogos/Teste.dtl"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/size/resizable=false
+window/stretch/mode="viewport"
+
+[input]
+
+panic={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194326,"unicode":0,"echo":false,"script":null)
+]
+}
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"

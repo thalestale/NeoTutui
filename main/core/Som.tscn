@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://cbt5rrrri8eky"]
+
+[ext_resource type="Script" path="res://core/Som.gd" id="1_4f1n5"]
+[ext_resource type="AudioStream" uid="uid://be01ypjecvrpx" path="res://asset/som/ui/click.wav" id="1_vuqal"]
+[ext_resource type="AudioStream" uid="uid://cr2leixx80eqs" path="res://asset/som/ui/volta2.wav" id="2_f24jv"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_vku20"]
+streams_count = 1
+random_volume_offset_db = 4.0
+stream_0/stream = ExtResource("1_vuqal")
+stream_0/weight = 1.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_hvaeq"]
+streams_count = 1
+random_pitch = 1.2
+random_volume_offset_db = 0.0
+stream_0/stream = ExtResource("2_f24jv")
+stream_0/weight = 1.0
+
+[node name="Som" type="Node"]
+script = ExtResource("1_4f1n5")
+
+[node name="UI" type="Node" parent="."]
+
+[node name="Click" type="AudioStreamPlayer" parent="UI"]
+stream = SubResource("AudioStreamRandomizer_vku20")
+volume_db = 11.555
+bus = &"UI"
+
+[node name="Volta" type="AudioStreamPlayer" parent="UI"]
+stream = SubResource("AudioStreamRandomizer_hvaeq")
+bus = &"UI"
