@@ -1,7 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://vg3uvj5ph8fn"]
+[gd_scene load_steps=6 format=3 uid="uid://vg3uvj5ph8fn"]
 
 [ext_resource type="Script" path="res://ui/menuprincipal/Menu.gd" id="1_6hd4u"]
 [ext_resource type="Texture2D" uid="uid://b20arqq6bderd" path="res://ui/menuprincipal/Janela.png" id="1_fchwu"]
+[ext_resource type="StyleBox" uid="uid://dherij6stbr2" path="res://ui/theme/bt_normal.tres" id="3_yu6fl"]
+
+[sub_resource type="FontVariation" id="FontVariation_h4jv6"]
+
+[sub_resource type="Theme" id="Theme_c6bf0"]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/icon_normal_color = Color(0, 0, 0, 1)
+Button/font_sizes/font_size = 26
+Button/fonts/font = SubResource("FontVariation_h4jv6")
+Button/styles/normal = ExtResource("3_yu6fl")
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -34,7 +44,6 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(1, 1e-05)
 
 [node name="Jan" type="TextureRect" parent="Janela"]
 layout_mode = 1
@@ -52,3 +61,12 @@ grow_vertical = 2
 scale = Vector2(2, 2)
 pivot_offset = Vector2(128, 128)
 texture = ExtResource("1_fchwu")
+
+[node name="Button" type="Button" parent="Janela"]
+layout_mode = 0
+offset_left = -57.0
+offset_top = -118.0
+offset_right = 104.0
+offset_bottom = -76.0
+theme = SubResource("Theme_c6bf0")
+text = "Começar"

@@ -21,8 +21,14 @@ _global_script_class_icons={
 [application]
 
 config/name="Neo Tutui"
+run/main_scene="res://ui/menuprincipal/Menu.tscn"
 config/features=PackedStringArray("4.0", "GL Compatibility")
+boot_splash/bg_color=Color(0.0941176, 0, 0.196078, 1)
 config/icon="res://icon.svg"
+
+[audio]
+
+buses/default_bus_layout="res://core/default_bus_layout.tres"
 
 [autoload]
 
