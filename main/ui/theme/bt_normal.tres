@@ -1,17 +1,20 @@
 [gd_resource type="StyleBoxFlat" format=3 uid="uid://dherij6stbr2"]
 
 [resource]
-bg_color = Color(0.866667, 0.882353, 0.780392, 1)
+bg_color = Color(0.705882, 0.72549, 0.768627, 1)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
-border_color = Color(0, 0, 0, 1)
+border_color = Color(0, 0, 0, 0.913725)
 corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
-shadow_color = Color(0, 0, 0, 1)
+corner_detail = 2
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+shadow_color = Color(0, 0, 0, 0.717647)
 shadow_size = 1
-shadow_offset = Vector2(4.196, 4.033)
+shadow_offset = Vector2(0.552, 0.519)
 anti_aliasing = false

@@ -1,2 +1,5 @@
 res://ui/menuprincipal/Menu.tscn
+res://ui/theme/MainTheme.tres
 res://ui/menuprincipal/Menu.gd
+res://ui/theme/bt_focus.tres
+res://ui/theme/bt_normal.tres

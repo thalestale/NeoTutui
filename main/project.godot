@@ -23,6 +23,7 @@ _global_script_class_icons={
 config/name="Neo Tutui"
 run/main_scene="res://ui/menuprincipal/Menu.tscn"
 config/features=PackedStringArray("4.0", "GL Compatibility")
+boot_splash/show_image=false
 boot_splash/bg_color=Color(0.0941176, 0, 0.196078, 1)
 config/icon="res://icon.svg"
 
@@ -64,8 +65,10 @@ editor/current_timeline_path="res://cenas/Teste/Dialogos/Teste.dtl"
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
+window/size/mode=4
 window/size/resizable=false
 window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 
 [input]
 
@@ -78,3 +81,4 @@ panic={
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
+2d/snap/snap_2d_transforms_to_pixel=true

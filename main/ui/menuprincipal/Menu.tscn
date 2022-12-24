@@ -1,17 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://vg3uvj5ph8fn"]
+[gd_scene load_steps=4 format=3 uid="uid://vg3uvj5ph8fn"]
 
 [ext_resource type="Script" path="res://ui/menuprincipal/Menu.gd" id="1_6hd4u"]
-[ext_resource type="Texture2D" uid="uid://b20arqq6bderd" path="res://ui/menuprincipal/Janela.png" id="1_fchwu"]
-[ext_resource type="StyleBox" uid="uid://dherij6stbr2" path="res://ui/theme/bt_normal.tres" id="3_yu6fl"]
-
-[sub_resource type="FontVariation" id="FontVariation_h4jv6"]
-
-[sub_resource type="Theme" id="Theme_c6bf0"]
-Button/colors/font_color = Color(0, 0, 0, 1)
-Button/colors/icon_normal_color = Color(0, 0, 0, 1)
-Button/font_sizes/font_size = 26
-Button/fonts/font = SubResource("FontVariation_h4jv6")
-Button/styles/normal = ExtResource("3_yu6fl")
+[ext_resource type="Texture2D" uid="uid://yimfbs37p8rp" path="res://ui/menuprincipal/JanelaB.png" id="2_y0oaf"]
+[ext_resource type="Theme" uid="uid://dcdrfxnryxp3c" path="res://ui/theme/MainTheme.tres" id="3_3hi4f"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -52,21 +43,27 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -128.0
-offset_top = -128.0
-offset_right = 128.0
-offset_bottom = 128.0
+offset_left = -150.0
+offset_top = -175.0
+offset_right = 150.0
+offset_bottom = 175.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(2, 2)
-pivot_offset = Vector2(128, 128)
-texture = ExtResource("1_fchwu")
+pivot_offset = Vector2(150, 175)
+texture = ExtResource("2_y0oaf")
 
 [node name="Button" type="Button" parent="Janela"]
 layout_mode = 0
-offset_left = -57.0
-offset_top = -118.0
-offset_right = 104.0
-offset_bottom = -76.0
-theme = SubResource("Theme_c6bf0")
-text = "Começar"
+offset_left = -63.0
+offset_top = -78.0
+offset_right = 98.0
+offset_bottom = -36.0
+pivot_offset = Vector2(379, -33)
+theme = ExtResource("3_3hi4f")
+shortcut_in_tooltip = false
+text = "COMEÇAR"
+
+[connection signal="focus_entered" from="Janela/Button" to="." method="_on_button_focus_entered"]
+[connection signal="focus_exited" from="Janela/Button" to="." method="_on_button_focus_exited"]
+[connection signal="mouse_entered" from="Janela/Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Janela/Button" to="." method="_on_button_mouse_exited"]
