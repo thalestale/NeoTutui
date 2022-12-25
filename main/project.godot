@@ -36,6 +36,7 @@ buses/default_bus_layout="res://core/default_bus_layout.tres"
 ControlesFixos="*res://core/ControlesFixos.gd"
 Anima="*res://ui/Anima.gd"
 Som="*res://core/Som.tscn"
+Mouse="*res://ui/cursor/Mouse.tscn"
 
 [dialogic]
 
@@ -81,4 +82,3 @@ panic={
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
-2d/snap/snap_2d_transforms_to_pixel=true

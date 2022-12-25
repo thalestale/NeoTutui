@@ -2,5 +2,7 @@ res://addons/scene_manager/SceneManager.tscn::672e02f0f54ac54b39d9c8c97c34697b::
 res://addons/scene_manager/ShaderFade.tres::d5f8719815bd2e123b2d3f08aae402a8::1671575246::res://.godot/exported/133200997/export-e950d1c5d0169a4ba5d3cb5e34fb0277-ShaderFade.res
 res://core/default_bus_layout.tres::8d35f3535e8ae9c284c04acffb12843b::1671755214::res://.godot/exported/133200997/export-f04a9dc75beeefa2da39e5213fa570aa-default_bus_layout.res
 res://core/Som.tscn::3d18a16c06c679b8c959b63b9254b9e5::1671755644::res://.godot/exported/133200997/export-0f70ae94aeca548ffd8bfce3b28fa334-Som.scn
-res://ui/menuprincipal/Menu.tscn::2cefb7686dee9d0520b0c4f2d4e0de3c::1671816736::res://.godot/exported/133200997/export-c595e4d0b041768fb4f5dd12ada0ba0c-Menu.scn
-res://ui/theme/bt_normal.tres::4478ae94ac3f62c495b9c723da24a99b::1671814290::res://.godot/exported/133200997/export-35ab29759763245e7b3fa3a64309c2ee-bt_normal.res
+res://ui/menuprincipal/Menu.tscn::2a1d1fbae617762e906fb37dc5cb8487::1671920047::res://.godot/exported/133200997/export-c595e4d0b041768fb4f5dd12ada0ba0c-Menu.scn
+res://ui/theme/bt_normal.tres::d1d83228e6aa8429598868b5d5c3903a::1671919556::res://.godot/exported/133200997/export-35ab29759763245e7b3fa3a64309c2ee-bt_normal.res
+res://ui/theme/bt_focus.tres::30266aba564a70c5a1410cedd4de1fbd::1671919556::res://.godot/exported/133200997/export-28d9c38ad97d18da70a07f2b20699f37-bt_focus.res
+res://ui/theme/MainTheme.tres::7884667a44e8ed20d9bf491a5ba54405::1671919556::res://.godot/exported/133200997/export-bff4588b889c19b5d9d755e07b8dbe33-MainTheme.res

@@ -11,8 +11,10 @@ func _ready():
 	
 	#get_node("/root/Anima").FECHA($Janela, "som")
 
-
-
+func _unhandled_input(event):
+	if Input.is_action_just_pressed("ui_accept"):
+		get_node("/root/Mouse/MouseCursor").position = Vector2(400, 400)
+	
 
 
 func _on_button_mouse_entered() -> void:
