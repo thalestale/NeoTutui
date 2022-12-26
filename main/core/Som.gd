@@ -1,8 +1,11 @@
 extends Node
 
 
-func CLICK():
+func CLICK() -> void:
 	$UI/Click.play()
 	
-func VOLTA():
+func VOLTA() -> void:
 	$UI/Volta.play()
+	
+func PICK() -> void:
+	$UI/Pick.play()

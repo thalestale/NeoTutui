@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Neo Tutui"
-run/main_scene="res://ui/menuprincipal/Menu.tscn"
+run/main_scene="res://Boot.tscn"
 config/features=PackedStringArray("4.0", "GL Compatibility")
 boot_splash/show_image=false
 boot_splash/bg_color=Color(0.0941176, 0, 0.196078, 1)
@@ -37,6 +37,7 @@ ControlesFixos="*res://core/ControlesFixos.gd"
 Anima="*res://ui/Anima.gd"
 Som="*res://core/Som.tscn"
 Mouse="*res://ui/cursor/Mouse.tscn"
+SceneManager="*res://addons/scene_manager/SceneManager.tscn"
 
 [dialogic]
 
@@ -70,6 +71,10 @@ window/size/mode=4
 window/size/resizable=false
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/scene_manager/plugin.cfg")
 
 [input]
 

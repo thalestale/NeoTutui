@@ -1,8 +1,9 @@
-[gd_resource type="Theme" load_steps=5 format=3 uid="uid://dcdrfxnryxp3c"]
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://dcdrfxnryxp3c"]
 
 [ext_resource type="StyleBox" uid="uid://dherij6stbr2" path="res://ui/theme/bt_normal.tres" id="1_73r2m"]
 [ext_resource type="FontFile" uid="uid://cw25j7ox5nmie" path="res://ui/theme/Uroob.ttf" id="1_arfv5"]
 [ext_resource type="StyleBox" uid="uid://1a06uufp3k1" path="res://ui/theme/bt_focus.tres" id="2_pdsy7"]
+[ext_resource type="StyleBox" uid="uid://t50pyuaammka" path="res://ui/theme/bt_pressed.tres" id="4_8g5vs"]
 
 [sub_resource type="FontVariation" id="FontVariation_li5wa"]
 base_font = ExtResource("1_arfv5")
@@ -17,11 +18,12 @@ Button/colors/font_focus_color = Color(0.137255, 0.129412, 0.129412, 1)
 Button/colors/font_hover_color = Color(0.121569, 0.121569, 0.121569, 1)
 Button/colors/font_hover_pressed_color = Color(0.12549, 0.12549, 0.12549, 1)
 Button/colors/font_outline_color = Color(1, 1, 1, 1)
-Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(0.576471, 0.631373, 0.52549, 1)
 Button/colors/icon_normal_color = Color(0, 0, 0, 1)
 Button/constants/outline_size = 6
 Button/font_sizes/font_size = 29
 Button/fonts/font = SubResource("FontVariation_li5wa")
 Button/styles/focus = ExtResource("2_pdsy7")
-Button/styles/hover = ExtResource("2_pdsy7")
+Button/styles/hover = ExtResource("1_73r2m")
 Button/styles/normal = ExtResource("1_73r2m")
+Button/styles/pressed = ExtResource("4_8g5vs")
