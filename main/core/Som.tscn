@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://cbt5rrrri8eky"]
+[gd_scene load_steps=10 format=3 uid="uid://cbt5rrrri8eky"]
 
 [ext_resource type="Script" path="res://core/Som.gd" id="1_4f1n5"]
 [ext_resource type="AudioStream" uid="uid://cr2leixx80eqs" path="res://asset/som/ui/volta2.wav" id="2_f24jv"]
 [ext_resource type="AudioStream" uid="uid://be01ypjecvrpx" path="res://asset/som/ui/click.wav" id="2_h0onr"]
 [ext_resource type="AudioStream" uid="uid://bfqshengc15sm" path="res://asset/som/ui/Pick.wav" id="2_x1g76"]
+[ext_resource type="AudioStream" uid="uid://h0dpvpp1fywa" path="res://asset/som/ui/Confirma.wav" id="5_egp3e"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_kau70"]
 streams_count = 1
@@ -24,7 +25,15 @@ random_volume_offset_db = 0.0
 stream_0/stream = ExtResource("2_f24jv")
 stream_0/weight = 1.0
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_3hoeh"]
+streams_count = 1
+random_pitch = 1.07
+random_volume_offset_db = 0.0
+stream_0/stream = ExtResource("5_egp3e")
+stream_0/weight = 1.0
+
 [node name="Som" type="Node"]
+process_mode = 3
 script = ExtResource("1_4f1n5")
 
 [node name="UI" type="Node" parent="."]
@@ -41,4 +50,9 @@ bus = &"UI"
 
 [node name="Volta" type="AudioStreamPlayer" parent="UI"]
 stream = SubResource("AudioStreamRandomizer_hvaeq")
+bus = &"UI"
+
+[node name="Ok" type="AudioStreamPlayer" parent="UI"]
+stream = SubResource("AudioStreamRandomizer_3hoeh")
+max_polyphony = 2
 bus = &"UI"

@@ -1,29 +1,35 @@
 extends Control
+var MouseFocus : bool
 
 ####################################################################################################
 
 func _ready():
-	await get_tree().create_timer(0.8).timeout
+	Anima.FUNDO($Fundo)
+	await SceneManager.transition_finished
+	Mouse.ON()
 	
-	get_node("/root/Anima").ABRE($Janela, "som")
+	Anima.ABRE($Janela, "som")
+	$Janela/Comecar.grab_focus()
+	
 	
 ####################################################################################################
 
-func _unhandled_input(_event) -> void:
-	if Input.is_action_just_pressed("ui_accept"):
-		Anima.CURSOR_MOVE($Janela/Comecar)
 	
 ####################################################################################################
 
 func _on_button_mouse_entered(extra_arg_0: String) -> void:
 	match extra_arg_0:
 		"Comecar":
+			Anima.Mouse()
 			$Janela/Comecar.grab_focus()
 		"Continuar":
+			Anima.Mouse()
 			$Janela/Continuar.grab_focus()
 		"Opcoes":
+			Anima.Mouse()
 			$Janela/Opcoes.grab_focus()
 		"Sair":
+			Anima.Mouse()
 			$Janela/Sair.grab_focus()
 
 #---------------------------------------------------------------------------------------------------
@@ -31,13 +37,13 @@ func _on_button_mouse_entered(extra_arg_0: String) -> void:
 func _on_button_mouse_exited(extra_arg_0: String) -> void:
 	match extra_arg_0:
 		"Comecar":
-			pass
+			Anima.NoMouse()
 		"Continuar":
-			pass
+			Anima.NoMouse()
 		"Opcoes":
-			pass
+			Anima.NoMouse()
 		"Sair":
-			pass
+			Anima.NoMouse()
 
 ###################################################################################################
 
@@ -73,7 +79,8 @@ func _on_button_focus_exited(extra_arg_0: String) -> void:
 
 
 func _on_comecar_pressed() -> void:
-	pass # Replace with function body.
+	Som.OK()
+	Change.HORIZONTAL("res://ui/menuprincipal/EntraNome/EntraNome.tscn")
 
 
 func _on_continuar_pressed() -> void:
@@ -81,7 +88,8 @@ func _on_continuar_pressed() -> void:
 
 
 func _on_opcoes_pressed() -> void:
-	pass # Replace with function body.
+	Som.OK()
+	Change.HORIZONTAL("res://ui/menuprincipal/Opcoes/Opcoes.tscn")
 
 
 func _on_sair_pressed() -> void:

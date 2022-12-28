@@ -1,0 +1,193 @@
+[gd_scene load_steps=5 format=3 uid="uid://brrojff47c3gh"]
+
+[ext_resource type="Script" path="res://ui/menuprincipal/Opcoes/Opcoes.gd" id="1_2c1lb"]
+[ext_resource type="Texture2D" uid="uid://c12tpvyb2cuue" path="res://ui/menuprincipal/pattern.png" id="1_rnin0"]
+[ext_resource type="Texture2D" uid="uid://caon4cox0aub" path="res://ui/menuprincipal/Opcoes/JanelaOpcoes.png" id="2_ucp5x"]
+[ext_resource type="Theme" uid="uid://dcdrfxnryxp3c" path="res://ui/theme/MainTheme.tres" id="3_nnitc"]
+
+[node name="Opcoes" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2c1lb")
+
+[node name="Fundo" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_rnin0")
+stretch_mode = 1
+
+[node name="Janela" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -175.0
+offset_top = -195.0
+offset_right = 175.0
+offset_bottom = 195.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(174, 195)
+texture = ExtResource("2_ucp5x")
+
+[node name="TelaCheia" type="CheckButton" parent="Janela"]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 255.0
+offset_right = 258.0
+offset_bottom = 293.0
+pivot_offset = Vector2(155, 30)
+theme = ExtResource("3_nnitc")
+shortcut_in_tooltip = false
+text = "  Tela cheia"
+
+[node name="Graficos" type="CheckButton" parent="Janela"]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 200.0
+offset_right = 258.0
+offset_bottom = 238.0
+pivot_offset = Vector2(155, 30)
+theme = ExtResource("3_nnitc")
+text = " Gráficos bons"
+
+[node name="Sons" type="ProgressBar" parent="Janela"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -73.0
+offset_top = -114.0
+offset_right = 77.0
+offset_bottom = -89.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.2, 1.2)
+pivot_offset = Vector2(72.9984, 10.18)
+theme = ExtResource("3_nnitc")
+step = 1.0
+value = 80.0
+rounded = true
+
+[node name="Label" type="Label" parent="Janela/Sons"]
+layout_mode = 0
+offset_left = 2.99972
+offset_top = -18.3033
+offset_right = 47.9997
+offset_bottom = 4.69669
+text = "Sons"
+
+[node name="BtUpSons" type="Button" parent="Janela/Sons"]
+layout_mode = 0
+offset_left = 153.833
+offset_top = 1.69667
+offset_right = 183.833
+offset_bottom = 41.6967
+scale = Vector2(0.613, 0.511)
+text = ">"
+
+[node name="BtDownSons" type="Button" parent="Janela/Sons"]
+layout_mode = 0
+offset_left = -22.8336
+offset_top = 2.53
+offset_right = 7.16638
+offset_bottom = 42.53
+scale = Vector2(0.614, 0.505)
+text = "<"
+
+[node name="Musica" type="ProgressBar" parent="Janela"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -72.0
+offset_top = -50.0
+offset_right = 78.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.2, 1.2)
+pivot_offset = Vector2(72.9984, 10.18)
+theme = ExtResource("3_nnitc")
+step = 1.0
+value = 80.0
+rounded = true
+
+[node name="Label" type="Label" parent="Janela/Musica"]
+layout_mode = 0
+offset_left = 2.99972
+offset_top = -18.3033
+offset_right = 47.9997
+offset_bottom = 4.69669
+text = "Música"
+
+[node name="BtUpMus" type="Button" parent="Janela/Musica"]
+layout_mode = 0
+offset_left = 153.833
+offset_top = 1.69667
+offset_right = 183.833
+offset_bottom = 41.6967
+scale = Vector2(0.613, 0.511)
+text = ">"
+
+[node name="BtDownMus" type="Button" parent="Janela/Musica"]
+layout_mode = 0
+offset_left = -22.8336
+offset_top = 2.53
+offset_right = 7.16638
+offset_bottom = 42.53
+scale = Vector2(0.614, 0.505)
+text = "<"
+
+[node name="BtVoltar" type="Button" parent="Janela"]
+layout_mode = 0
+offset_left = 27.0
+offset_top = 319.0
+offset_right = 124.0
+offset_bottom = 359.0
+theme = ExtResource("3_nnitc")
+text = " VOLTAR "
+
+[connection signal="focus_entered" from="Janela/TelaCheia" to="." method="_on_tela_cheia_focus_entered"]
+[connection signal="focus_exited" from="Janela/TelaCheia" to="." method="_on_tela_cheia_focus_exited"]
+[connection signal="mouse_entered" from="Janela/TelaCheia" to="." method="_on_tela_cheia_mouse_entered"]
+[connection signal="mouse_exited" from="Janela/TelaCheia" to="." method="_on_tela_cheia_mouse_exited"]
+[connection signal="toggled" from="Janela/TelaCheia" to="." method="_on_tela_cheia_toggled"]
+[connection signal="value_changed" from="Janela/Sons" to="." method="_on_sons_value_changed"]
+[connection signal="focus_entered" from="Janela/Sons/BtUpSons" to="." method="_on_bt_up_sons_focus_entered"]
+[connection signal="focus_exited" from="Janela/Sons/BtUpSons" to="." method="_on_bt_up_sons_focus_exited"]
+[connection signal="mouse_entered" from="Janela/Sons/BtUpSons" to="." method="_on_bt_up_sons_mouse_entered"]
+[connection signal="mouse_exited" from="Janela/Sons/BtUpSons" to="." method="_on_bt_up_sons_mouse_exited"]
+[connection signal="pressed" from="Janela/Sons/BtUpSons" to="." method="_on_bt_up_sons_pressed"]
+[connection signal="focus_entered" from="Janela/Sons/BtDownSons" to="." method="_on_bt_down_sons_focus_entered"]
+[connection signal="focus_exited" from="Janela/Sons/BtDownSons" to="." method="_on_bt_down_sons_focus_exited"]
+[connection signal="mouse_entered" from="Janela/Sons/BtDownSons" to="." method="_on_bt_down_sons_mouse_entered"]
+[connection signal="mouse_exited" from="Janela/Sons/BtDownSons" to="." method="_on_bt_down_sons_mouse_exited"]
+[connection signal="pressed" from="Janela/Sons/BtDownSons" to="." method="_on_bt_down_sons_pressed"]
+[connection signal="value_changed" from="Janela/Musica" to="." method="_on_musica_value_changed"]
+[connection signal="focus_entered" from="Janela/Musica/BtUpMus" to="." method="_on_bt_up_mus_focus_entered"]
+[connection signal="focus_exited" from="Janela/Musica/BtUpMus" to="." method="_on_bt_up_mus_focus_exited"]
+[connection signal="mouse_entered" from="Janela/Musica/BtUpMus" to="." method="_on_bt_up_mus_mouse_entered"]
+[connection signal="mouse_exited" from="Janela/Musica/BtUpMus" to="." method="_on_bt_up_mus_mouse_exited"]
+[connection signal="pressed" from="Janela/Musica/BtUpMus" to="." method="_on_bt_up_mus_pressed"]
+[connection signal="focus_entered" from="Janela/Musica/BtDownMus" to="." method="_on_bt_down_mus_focus_entered"]
+[connection signal="focus_exited" from="Janela/Musica/BtDownMus" to="." method="_on_bt_down_mus_focus_exited"]
+[connection signal="mouse_entered" from="Janela/Musica/BtDownMus" to="." method="_on_bt_down_mus_mouse_entered"]
+[connection signal="mouse_exited" from="Janela/Musica/BtDownMus" to="." method="_on_bt_down_mus_mouse_exited"]
+[connection signal="pressed" from="Janela/Musica/BtDownMus" to="." method="_on_bt_down_mus_pressed"]
+[connection signal="focus_entered" from="Janela/BtVoltar" to="." method="_on_bt_voltar_focus_entered"]
+[connection signal="focus_exited" from="Janela/BtVoltar" to="." method="_on_bt_voltar_focus_exited"]
+[connection signal="mouse_entered" from="Janela/BtVoltar" to="." method="_on_bt_voltar_mouse_entered"]
+[connection signal="mouse_exited" from="Janela/BtVoltar" to="." method="_on_bt_voltar_mouse_exited"]
+[connection signal="pressed" from="Janela/BtVoltar" to="." method="_on_bt_voltar_pressed"]

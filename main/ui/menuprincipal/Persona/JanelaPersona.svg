@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="400"
+   height="390"
+   viewBox="0 0 105.83333 103.1875"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (1:1.2.2+202212051551+b0a8486541)"
+   sodipodi:docname="JanelaPersona.svg"
+   inkscape:export-filename="JanelaOpcoes.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.169343"
+     inkscape:cx="148.37391"
+     inkscape:cy="211.65731"
+     inkscape:window-width="1280"
+     inkscape:window-height="736"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showguides="true" />
+  <defs
+     id="defs2">
+    <rect
+       x="34.922119"
+       y="70.037991"
+       width="148.61109"
+       height="41.90053"
+       id="rect4856" />
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#Wavywhite"
+       id="pattern3868"
+       patternTransform="scale(0.09668557,0.28582999)" />
+    <pattern
+       inkscape:collect="always"
+       patternUnits="userSpaceOnUse"
+       width="30.066020"
+       height="5.1805778"
+       id="Wavywhite"
+       inkscape:stockid="Wavy white"
+       inkscape:isstock="true">
+      <path
+         style="fill:white;stroke:none;"
+         d="M 7.597,0.061 C 5.079,-0.187 2.656,0.302 -0.01,1.788 L -0.01,3.061 C 2.773,1.431 5.173,1.052 7.472,1.280 C 9.770,1.508 11.969,2.361 14.253,3.218 C 18.820,4.931 23.804,6.676 30.066,3.061 L 30.062,1.788 C 23.622,5.497 19.246,3.770 14.691,2.061 C 12.413,1.207 10.115,0.311 7.597,0.061 z "
+         id="path2772" />
+    </pattern>
+    <pattern
+       inkscape:collect="always"
+       xlink:href="#Checkerboardwhite"
+       id="pattern3131"
+       patternTransform="matrix(5.8255147,0,0,6.4630697,9.5877428,-0.01962441)" />
+    <pattern
+       inkscape:collect="always"
+       patternUnits="userSpaceOnUse"
+       width="2"
+       height="2"
+       patternTransform="translate(0,0) scale(10,10)"
+       id="Checkerboardwhite"
+       inkscape:stockid="Checkerboard white"
+       inkscape:isstock="true">
+      <rect
+         style="fill:white;stroke:none"
+         x="0"
+         y="0"
+         width="1"
+         height="1"
+         id="rect2197" />
+      <rect
+         style="fill:white;stroke:none"
+         x="1"
+         y="1"
+         width="1"
+         height="1"
+         id="rect2199" />
+    </pattern>
+    <rect
+       x="16.864305"
+       y="-25.16383"
+       width="314.82382"
+       height="122.90584"
+       id="rect1341" />
+    <linearGradient
+       id="linearGradient2963"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop2961" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3640"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#ededed;stop-opacity:1;"
+         offset="0"
+         id="stop3638" />
+    </linearGradient>
+    <rect
+       x="79.439255"
+       y="20.560747"
+       width="104.6729"
+       height="18.691589"
+       id="rect5361" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2.6121;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.433762;paint-order:markers fill stroke"
+       id="rect1514"
+       width="99.082741"
+       height="93.002426"
+       x="3.8148766"
+       y="7.796731"
+       ry="1.9622226" />
+    <rect
+       style="fill:#adadad;fill-opacity:1;stroke:#000000;stroke-width:0.241865;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke"
+       id="rect2329"
+       width="97.855263"
+       height="93.491081"
+       x="3.2669249"
+       y="6.0595975"
+       ry="2.8803315" />
+    <rect
+       style="opacity:0.38846021;fill:url(#pattern3868);fill-opacity:1;stroke:none;stroke-width:0.235527;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers fill stroke"
+       id="rect980"
+       width="95.29924"
+       height="91.049065"
+       x="4.5449305"
+       y="7.2806063"
+       ry="2.8050964" />
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.331602;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect924"
+       width="63.473656"
+       height="11.199172"
+       x="21.768154"
+       y="1.6715261"
+       ry="1.2373424"
+       rx="3.9399054" />
+    <rect
+       style="fill:#accaaa;fill-opacity:1;stroke:#000000;stroke-width:0.454892;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:markers stroke fill"
+       id="rect15267"
+       width="63.473656"
+       height="11.199172"
+       x="21.179838"
+       y="0.93774551"
+       ry="1.5616297"
+       rx="3.1543605" />
+    <path
+       sodipodi:type="star"
+       style="opacity:0.565217;fill:#000000;fill-opacity:0.670428;stroke:none;stroke-width:0.0774786;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
+       id="path3544"
+       inkscape:flatsided="false"
+       sodipodi:sides="4"
+       sodipodi:cx="9.3514824"
+       sodipodi:cy="13.934176"
+       sodipodi:r1="2.5288568"
+       sodipodi:r2="1.2644283"
+       sodipodi:arg1="1.5707963"
+       sodipodi:arg2="2.3561945"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 9.3514825,16.463033 -0.8940859,-1.634771 -1.634771,-0.894085 1.634771,-0.894086 0.8940857,-1.634771 0.8940857,1.634771 1.634771,0.894085 -1.634771,0.894086 z"
+       transform="matrix(1.0419502,0,0,0.99820908,67.206526,-7.564961)" />
+    <path
+       sodipodi:type="star"
+       style="opacity:0.565217;fill:#000000;fill-opacity:0.670428;stroke:none;stroke-width:0.0774786;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill"
+       id="path3552"
+       inkscape:flatsided="false"
+       sodipodi:sides="4"
+       sodipodi:cx="9.3514824"
+       sodipodi:cy="13.934176"
+       sodipodi:r1="2.5288568"
+       sodipodi:r2="1.2644283"
+       sodipodi:arg1="1.5707963"
+       sodipodi:arg2="2.3561945"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 9.3514825,16.463033 -0.8940859,-1.634771 -1.634771,-0.894085 1.634771,-0.894086 0.8940857,-1.634771 0.8940857,1.634771 1.634771,0.894085 -1.634771,0.894086 z"
+       transform="matrix(1.0419502,0,0,0.99820908,18.696476,-7.7693231)" />
+    <rect
+       style="opacity:0.733335;mix-blend-mode:normal;fill:url(#pattern3131);fill-opacity:1;stroke:#000000;stroke-width:0.438843;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect548"
+       width="35.066204"
+       height="45.876625"
+       x="62.4716"
+       y="15.91989"
+       ry="4.0780125" />
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text4854"
+       style="font-style:normal;font-weight:normal;font-size:32px;line-height:1.25;font-family:Uroob;white-space:pre;shape-inside:url(#rect4856);fill:#000000;fill-opacity:1;stroke:none;-inkscape-font-specification:'Uroob, Normal';font-stretch:normal;font-variant:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="22.364161"
+       y="26.374205"
+       id="text4862"><tspan
+         sodipodi:role="line"
+         id="tspan4860"
+         style="stroke-width:0.264583"
+         x="22.364161"
+         y="26.374205" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;line-height:1.25;font-family:Uroob;-inkscape-font-specification:'Uroob, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:#f7eee7;stroke-width:1.065;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       x="10.350815"
+       y="37.020229"
+       id="text4866"><tspan
+         sodipodi:role="line"
+         id="tspan4864"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;font-family:Uroob;-inkscape-font-specification:'Uroob, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke:#f7eee7;stroke-width:1.065;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         x="10.350815"
+         y="37.020229">CABELO</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35px;line-height:1.25;font-family:Uroob;-inkscape-font-specification:'Uroob, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:#f7eee7;stroke-width:1.065;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       x="10.507257"
+       y="47.151848"
+       id="text4922"><tspan
+         sodipodi:role="line"
+         id="tspan4920"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35px;font-family:Uroob;-inkscape-font-specification:'Uroob, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke:#f7eee7;stroke-width:1.065;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         x="10.507257"
+         y="47.151848">COR DO CABELO</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35px;line-height:1.25;font-family:Uroob;-inkscape-font-specification:'Uroob, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:#f7eee7;stroke-width:1.065;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       x="10.363189"
+       y="58.405075"
+       id="text4930"><tspan
+         sodipodi:role="line"
+         id="tspan4928"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35px;font-family:Uroob;-inkscape-font-specification:'Uroob, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke:#f7eee7;stroke-width:1.065;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         x="10.363189"
+         y="58.405075">COR DA PELE</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;line-height:1.25;font-family:Uroob;-inkscape-font-specification:'Uroob, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:#f7eee7;stroke-width:1.065;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       x="10.424174"
+       y="70.283195"
+       id="text4934"><tspan
+         sodipodi:role="line"
+         id="tspan4932"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.46667px;font-family:Uroob;-inkscape-font-specification:'Uroob, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke:#f7eee7;stroke-width:1.065;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         x="10.424174"
+         y="70.283195">ÓCULOS</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111px;line-height:1.25;font-family:Uroob;-inkscape-font-specification:'Uroob, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke:#f7eee7;stroke-width:1.065;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       x="10.188186"
+       y="24.756754"
+       id="text4938"><tspan
+         sodipodi:role="line"
+         id="tspan4936"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.76111111px;font-family:Uroob;-inkscape-font-specification:'Uroob, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;stroke:#f7eee7;stroke-width:1.065;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+         x="10.188186"
+         y="24.756754">PRONOME</tspan></text>
+  </g>
+</svg>

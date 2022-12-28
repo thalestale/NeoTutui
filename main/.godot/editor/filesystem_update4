@@ -1,9 +1,1 @@
 res://Boot.tscn
-res://addons/scene_manager/SceneManager.gd
-res://core/Boot.gd
-res://ui/menuprincipal/Menu.gd
-res://ui/theme/bt_normal.tres
-res://ui/theme/bt_focus.tres
-res://ui/theme/bt_pressed.tres
-res://ui/theme/MainTheme.tres
-res://ui/menuprincipal/Menu.tscn

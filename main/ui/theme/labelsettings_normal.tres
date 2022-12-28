@@ -1,0 +1,18 @@
+[gd_resource type="LabelSettings" load_steps=3 format=3 uid="uid://ceow2tkpcs35d"]
+
+[ext_resource type="FontFile" uid="uid://cw25j7ox5nmie" path="res://ui/theme/Uroob.ttf" id="1_w8g34"]
+
+[sub_resource type="FontVariation" id="FontVariation_uu13c"]
+base_font = ExtResource("1_w8g34")
+variation_embolden = 0.1
+spacing_glyph = 1
+
+[resource]
+font = SubResource("FontVariation_uu13c")
+font_size = 36
+font_color = Color(0.847059, 0.858824, 0.772549, 1)
+outline_size = 12
+outline_color = Color(0.266667, 0.266667, 0.266667, 1)
+shadow_size = 12
+shadow_color = Color(0, 0, 0, 0.27451)
+shadow_offset = Vector2(2.109, 2.02)

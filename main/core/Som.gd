@@ -9,3 +9,6 @@ func VOLTA() -> void:
 	
 func PICK() -> void:
 	$UI/Pick.play()
+
+func OK() -> void:
+	$UI/Ok.play()

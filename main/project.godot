@@ -38,6 +38,8 @@ Anima="*res://ui/Anima.gd"
 Som="*res://core/Som.tscn"
 Mouse="*res://ui/cursor/Mouse.tscn"
 SceneManager="*res://addons/scene_manager/SceneManager.tscn"
+Data="*res://core/DATA.gd"
+Change="*res://core/ChangeScene.gd"
 
 [dialogic]
 

@@ -54,7 +54,6 @@ grow_vertical = 2
 script = ExtResource("1_g5jiw")
 
 [node name="MouseCursor" type="AnimatedSprite2D" parent="."]
-modulate = Color(0.992801, 0.992637, 0.993783, 1)
 z_index = 99
 texture_filter = 2
 position = Vector2(180, 82)

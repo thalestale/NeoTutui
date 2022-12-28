@@ -1,0 +1,105 @@
+[gd_scene load_steps=9 format=3 uid="uid://cah8htqvhsk3q"]
+
+[ext_resource type="Script" path="res://ui/menuprincipal/EntraNome/EntraNome.gd" id="1_fyo0g"]
+[ext_resource type="Texture2D" uid="uid://c12tpvyb2cuue" path="res://ui/menuprincipal/pattern.png" id="1_mlgy7"]
+[ext_resource type="Texture2D" uid="uid://dd272ceg4ag5c" path="res://ui/menuprincipal/EntraNome/JanelaNome.png" id="2_6y70d"]
+[ext_resource type="Theme" uid="uid://dcdrfxnryxp3c" path="res://ui/theme/MainTheme.tres" id="3_bgovd"]
+[ext_resource type="LabelSettings" uid="uid://ceow2tkpcs35d" path="res://ui/theme/labelsettings_normal.tres" id="5_1wopx"]
+[ext_resource type="Texture2D" uid="uid://ccep2bare72e2" path="res://ui/menuprincipal/EntraNome/teclaEnter.svg" id="6_udksp"]
+[ext_resource type="Texture2D" uid="uid://bs244rgnc4m7p" path="res://ui/menuprincipal/EntraNome/teclaEnterPress.svg" id="7_y3d0u"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nnl1w"]
+animations = [{
+"frames": [ExtResource("6_udksp"), ExtResource("7_y3d0u")],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="Nome" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fyo0g")
+
+[node name="Fundo" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_mlgy7")
+
+[node name="Janela" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -100.0
+offset_right = 250.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(256, 101)
+texture = ExtResource("2_6y70d")
+
+[node name="LineEdit" type="LineEdit" parent="Janela"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -10.0
+offset_right = 120.0
+offset_bottom = 37.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(121, 24.5)
+theme = ExtResource("3_bgovd")
+alignment = 1
+max_length = 12
+context_menu_enabled = false
+shortcut_keys_enabled = false
+middle_mouse_paste_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+caret_blink = true
+caret_blink_interval = 0.5
+
+[node name="Label" type="Label" parent="Janela"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -137.5
+offset_top = -20.0
+offset_right = 137.5
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(135, 17.5)
+theme = ExtResource("3_bgovd")
+text = "Como você se chama?"
+label_settings = ExtResource("5_1wopx")
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="TeclaEnter" type="AnimatedSprite2D" parent="Janela"]
+visible = false
+texture_filter = 2
+position = Vector2(436, 165)
+scale = Vector2(0.5, 0.5)
+frames = SubResource("SpriteFrames_nnl1w")
+playing = true
+
+[connection signal="text_changed" from="Janela/LineEdit" to="." method="_on_line_edit_text_changed"]
+[connection signal="text_submitted" from="Janela/LineEdit" to="." method="_on_line_edit_text_submitted"]

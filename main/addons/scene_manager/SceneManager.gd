@@ -133,7 +133,7 @@ func _replace_scene(path):
 	emit_signal("scene_unloaded")
 	var following_scene: PackedScene = ResourceLoader.load(path, "PackedScene", 0)
 	_current_scene = following_scene.instantiate()
-	await _tree.create_timer(0.0).timeout
+	await _tree.create_timer(0.1).timeout
 	_root.add_child(_current_scene)
 	_tree.set_current_scene(_current_scene)
 
