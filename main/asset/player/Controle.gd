@@ -1,40 +1,56 @@
 ##### CONTROLE DO PLAYER BASEADO 3D PLATFORMER #################################
 
 extends CharacterBody3D
+
 enum Anim {FLOOR, AIR,}
 enum AnimPause {PLAYING, PAUSED,}
-var linear_velocity = Vector3()
-var movement_dir = Vector3()
+var linear_velocity : Vector3
+var movement_dir : Vector3
 @onready var gravity = ProjectSettings.get_setting("physics/3d/default_gravity") * ProjectSettings.get_setting("physics/3d/default_gravity_vector")
 
-#### AJUSTAVEIS ################################################################
+#### AJUSTES ################################################################
 
-const SHARP_TURN_THRESHOLD = 120
-const MAX_SPEED = 5
-const TURN_SPEED = 40
-const ACCEL = 14.0
-const DEACCEL = 14.0
+const SHARP_TURN_THRESHOLD : int = 120
+const MAX_SPEED : int = 5
+const TURN_SPEED : int = 40
+const ACCEL : float = 14.0
+const DEACCEL : float = 14.0
 const CHAR_SCALE = Vector3(1, 1, 1)
-const AIR_ACCEL_FACTOR = 0.4
-const AIR_IDLE_DEACCEL = false
+const AIR_ACCEL_FACTOR : float = 0.4
+const AIR_IDLE_DEACCEL : bool = false
+
+# Outras Var ------------------------------------------------------------------
 
 var movement_vec2 : Vector2
 var vvertical : float
 var vhorizontal : Vector3
 var dirhorizontal : Vector3
-var speedhorizontal
-var cam_basis
+var speedhorizontal : float
+var cam_basis : Basis
 var direcao : Vector3
+var sharp_turn : float
+var facing_mesh : Vector3
+var mesh_xform
+var m3 : Basis
+var walkblend : float
+var n : Vector3
+var t : Vector3
+var x : float
+var y : float
+var ang : float
+var s : float
+var turn : float
+var a : float
+var anim
 
 ################################################################################
 ################################################################################
 
-
-func _physics_process(delta):
+func _physics_process(delta : float) -> void:
 
 	linear_velocity += gravity * delta
 
-	var anim = Anim.FLOOR
+	anim = Anim.FLOOR
 
 	vvertical = linear_velocity.y # Vertical velocity.
 	vhorizontal = Vector3(linear_velocity.x, 0, linear_velocity.z) # Horizontal velocity.
@@ -52,7 +68,7 @@ func _physics_process(delta):
 	
 
 	if is_on_floor():
-		var sharp_turn = speedhorizontal > 0.1 and rad_to_deg(acos(direcao.dot(dirhorizontal))) > SHARP_TURN_THRESHOLD
+		sharp_turn = speedhorizontal > 0.1 and rad_to_deg(acos(direcao.dot(dirhorizontal))) > SHARP_TURN_THRESHOLD
 
 		if direcao.length() > 0.1 and not sharp_turn:
 			if speedhorizontal > 0.01:
@@ -69,13 +85,13 @@ func _physics_process(delta):
 
 		vhorizontal = dirhorizontal * speedhorizontal
 		
-		var mesh_xform = get_node("Armature").get_transform()
-		var facing_mesh = -mesh_xform.basis[0].normalized()
+		mesh_xform = get_node("Armature").get_transform()
+		facing_mesh = -mesh_xform.basis[0].normalized()
 		facing_mesh = (facing_mesh - Vector3.UP * facing_mesh.dot(Vector3.UP)).normalized()
 
 		if speedhorizontal > 0:
 			facing_mesh = adjust_facing(facing_mesh, direcao, delta, 1.0 / speedhorizontal * TURN_SPEED, Vector3.UP)
-		var m3 = Basis(-facing_mesh, Vector3.UP, -facing_mesh.cross(Vector3.UP).normalized()).scaled(CHAR_SCALE)
+		m3 = Basis(-facing_mesh, Vector3.UP, -facing_mesh.cross(Vector3.UP).normalized()).scaled(CHAR_SCALE)
 
 		get_node("Armature").set_transform(Transform3D(m3, mesh_xform.origin))
 		
@@ -101,7 +117,7 @@ func _physics_process(delta):
 	move_and_slide()
 
 	####### ANIMA ##############################################################
-	var walkblend = speedhorizontal / MAX_SPEED
+	walkblend = speedhorizontal / MAX_SPEED
 	
 	
 	if is_on_floor():
@@ -116,22 +132,23 @@ func _physics_process(delta):
 ################################################################################
 
 
-func adjust_facing(p_facing, p_target, p_step, p_adjust_rate, current_gn):
-	var n = p_target # Normal.
-	var t = n.cross(current_gn).normalized()
+func adjust_facing(p_facing : Vector3, p_target : Vector3, p_step : float, 
+p_adjust_rate : float, current_gn : Vector3):
+	
+	n = p_target # Normal.
+	t = n.cross(current_gn).normalized()
 
-	var x = n.dot(p_facing)
-	var y = t.dot(p_facing)
+	x = n.dot(p_facing)
+	y = t.dot(p_facing)
 
-	var ang = atan2(y,x)
+	ang = atan2(y,x)
 
 	if abs(ang) < 0.001: # Too small.
 		return p_facing
 
-	var s = sign(ang)
+	s = sign(ang)
 	ang = ang * s
-	var turn = ang * p_adjust_rate * p_step
-	var a
+	turn = ang * p_adjust_rate * p_step
 	if ang < turn:
 		a = ang
 	else:

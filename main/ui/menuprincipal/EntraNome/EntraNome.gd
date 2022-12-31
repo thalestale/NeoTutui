@@ -34,5 +34,5 @@ func _on_line_edit_text_changed(_new_text: String) -> void:
 func _on_line_edit_text_submitted(new_text: String) -> void:
 	Som.OK()
 	Data.NomePlayer = new_text
-	Change.HORIZONTAL("res://Boot.tscn")
+	Change.HORIZONTAL("res://cenas/Tester.tscn")
 	

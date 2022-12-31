@@ -41,6 +41,10 @@ SceneManager="*res://addons/scene_manager/SceneManager.tscn"
 Change="*res://core/ChangeScene.gd"
 Data="*res://core/Data.tscn"
 
+[compression]
+
+formats/zstd/compression_level=4
+
 [dialogic]
 
 editor/character_preview_mode=0
@@ -74,6 +78,13 @@ window/size/resizable=false
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 
+[editor]
+
+movie_writer/mix_rate=44000
+movie_writer/mjpeg_quality=0.85
+node_naming/name_num_separator=2
+scene/scene_naming=1
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/scene_manager/plugin.cfg")
@@ -86,11 +97,29 @@ panic={
 ]
 }
 
+[physics]
+
+common/max_physics_steps_per_frame=4
+3d/solver/solver_iterations=4
+
 [rendering]
 
+occlusion_culling/bvh_build_quality=1
 renderer/rendering_method="gl_compatibility"
+textures/webp_compression/compression_method=3
 lights_and_shadows/directional_shadow/soft_shadow_filter_quality=0
 lights_and_shadows/positional_shadow/soft_shadow_filter_quality=0
 gl_compatibility/item_buffer_size=8000
+reflections/sky_reflections/roughness_layers=6
+reflections/sky_reflections/ggx_samples=16
+reflections/reflection_atlas/reflection_size=128
+reflections/reflection_atlas/reflection_count=32
 textures/default_filters/use_nearest_mipmap_filter=true
 textures/default_filters/anisotropic_filtering_level=0
+environment/ssao/quality=0
+environment/ssil/quality=0
+anti_aliasing/screen_space_roughness_limiter/enabled=false
+environment/glow/upscale_mode=0
+limits/opengl/max_renderable_elements=32000
+limits/opengl/max_renderable_lights=16
+limits/opengl/max_lights_per_object=4
