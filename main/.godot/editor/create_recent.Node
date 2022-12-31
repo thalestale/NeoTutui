@@ -1,3 +1,9 @@
+OmniLight3D
+CollisionShape3D
+Camera3D
+CSGBox3D
+AnimationTree
+CharacterBody3D
 AnimatedSprite2D
 Label
 LineEdit

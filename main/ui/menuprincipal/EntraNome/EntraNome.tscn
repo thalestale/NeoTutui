@@ -27,13 +27,11 @@ grow_vertical = 2
 script = ExtResource("1_fyo0g")
 
 [node name="Fundo" type="TextureRect" parent="."]
-layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("1_mlgy7")
 
 [node name="Janela" type="TextureRect" parent="."]
-layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -45,11 +43,11 @@ offset_right = 250.0
 offset_bottom = 100.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1, 1e-05)
 pivot_offset = Vector2(256, 101)
 texture = ExtResource("2_6y70d")
 
 [node name="LineEdit" type="LineEdit" parent="Janela"]
-layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -61,6 +59,7 @@ offset_right = 120.0
 offset_bottom = 37.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1, 1e-05)
 pivot_offset = Vector2(121, 24.5)
 theme = ExtResource("3_bgovd")
 alignment = 1
@@ -74,7 +73,6 @@ caret_blink = true
 caret_blink_interval = 0.5
 
 [node name="Label" type="Label" parent="Janela"]
-layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5

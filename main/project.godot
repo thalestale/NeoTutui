@@ -38,8 +38,8 @@ Anima="*res://ui/Anima.gd"
 Som="*res://core/Som.tscn"
 Mouse="*res://ui/cursor/Mouse.tscn"
 SceneManager="*res://addons/scene_manager/SceneManager.tscn"
-Data="*res://core/DATA.gd"
 Change="*res://core/ChangeScene.gd"
+Data="*res://core/Data.tscn"
 
 [dialogic]
 
@@ -89,3 +89,8 @@ panic={
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
+lights_and_shadows/directional_shadow/soft_shadow_filter_quality=0
+lights_and_shadows/positional_shadow/soft_shadow_filter_quality=0
+gl_compatibility/item_buffer_size=8000
+textures/default_filters/use_nearest_mipmap_filter=true
+textures/default_filters/anisotropic_filtering_level=0

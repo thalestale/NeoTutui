@@ -1,1 +1,4 @@
+res://asset/player/Controle.gd
+res://asset/player/Player.tscn
 res://Boot.tscn
+res://cenas/Tester.tscn

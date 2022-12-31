@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjkse4xdbaybd"]
+
+[ext_resource type="Script" path="res://core/DATA.gd" id="1_egaf5"]
+
+[node name="Data" type="Node" groups=["Persist"]]
+script = ExtResource("1_egaf5")

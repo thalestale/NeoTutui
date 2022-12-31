@@ -18,6 +18,7 @@ func _ready() -> void:
 	#_______________________________________________________
 	
 	Anima.FUNDO($Fundo)
+	$Janela/BtVoltar.grab_focus()
 
 #############################################################################
 #===========================================================================
@@ -57,10 +58,10 @@ func _on_musica_value_changed(value: float) -> void:
 	Som.CLICK()
 	
 func _on_bt_up_mus_pressed() -> void:
-	$Janela/Musica/BtUpMus.value += 5
+	$Janela/Musica.value += 5
 
 func _on_bt_down_mus_pressed() -> void:
-	$Janela/Musica/BtUpMus.value += -5
+	$Janela/Musica.value += -5
 	
 #---------- Focus Sons ---------------------
 	
@@ -95,10 +96,12 @@ func _on_bt_down_sons_mouse_exited() -> void:
 #------------- Focus Musica -------------------
 
 func _on_bt_up_mus_focus_entered() -> void:
-	pass # Replace with function body.
+	#Anima.BUTTON_FOCUS($Janela/Musica/BtUpMus)
+	pass
 
 func _on_bt_up_mus_focus_exited() -> void:
-	pass # Replace with function body.
+	#Anima.BUTTON_UNFOCUS($Janela/Musica/BtUpMus)
+	pass
 
 func _on_bt_up_mus_mouse_entered() -> void:
 	Anima.Mouse()
@@ -108,10 +111,12 @@ func _on_bt_up_mus_mouse_exited() -> void:
 	Anima.NoMouse()
 
 func _on_bt_down_mus_focus_entered() -> void:
-	pass # Replace with function body.
+	#Anima.BUTTON_FOCUS($Janela/Musica/BtDownMus)
+	pass
 
 func _on_bt_down_mus_focus_exited() -> void:
-	pass # Replace with function body.
+	#Anima.BUTTON_UNFOCUS($Janela/Musica/BtDownMus)
+	pass
 
 func _on_bt_down_mus_mouse_entered() -> void:
 	Anima.Mouse()
@@ -166,5 +171,22 @@ func _on_tela_cheia_mouse_exited() -> void:
 #==========================================================================
 
 
+func _on_graficos_toggled(button_pressed: bool) -> void:
+	pass # Replace with function body.
 
 
+func _on_graficos_focus_entered() -> void:
+	Anima.BUTTON_FOCUS($Janela/Graficos)
+
+
+func _on_graficos_focus_exited() -> void:
+	Anima.BUTTON_UNFOCUS($Janela/Graficos)
+
+
+func _on_graficos_mouse_entered() -> void:
+	Anima.Mouse()
+	$Janela/Graficos.grab_focus()
+
+
+func _on_graficos_mouse_exited() -> void:
+	Anima.NoMouse()
