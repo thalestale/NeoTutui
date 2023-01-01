@@ -1,6 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://t35jeg7psw2j"]
+[gd_scene load_steps=8 format=3 uid="uid://t35jeg7psw2j"]
 
 [ext_resource type="PackedScene" uid="uid://doju2kbq4wpiq" path="res://asset/player/Player.tscn" id="1_b4acx"]
+[ext_resource type="Script" path="res://core/Camera.gd" id="2_nchtm"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_mf2m0"]
+
+[sub_resource type="Sky" id="Sky_b8svq"]
+sky_material = SubResource("ProceduralSkyMaterial_mf2m0")
+radiance_size = 0
+
+[sub_resource type="Environment" id="Environment_m7yup"]
+background_mode = 2
+sky = SubResource("Sky_b8svq")
+ambient_light_source = 3
+adjustment_brightness = 0.82
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6omm2"]
 size = Vector3(20, 1, 20)
@@ -8,22 +21,31 @@ size = Vector3(20, 1, 20)
 [sub_resource type="BoxMesh" id="BoxMesh_u1p8h"]
 size = Vector3(20, 1, 20)
 
-[node name="Node3D" type="Node3D"]
+[node name="Cena" type="Node3D"]
 
 [node name="Player" parent="." instance=ExtResource("1_b4acx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.72606, 0.972472, 1.29072)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.53921, 8.23938)
+transform = Transform3D(1, 0, 0, 0, 0.819152, 0.573576, 0, -0.573576, 0.819152, 0, 10, 10)
+environment = SubResource("Environment_m7yup")
 current = true
+fov = 45.0
+size = 0.2
+frustum_offset = Vector2(-0.024, -0.021)
+near = 0.147
+far = 224.15
+script = ExtResource("2_nchtm")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.81622, 0)
 light_energy = 4.955
 light_size = 0.101
 light_specular = 0.68
+light_bake_mode = 0
 shadow_enabled = true
 omni_range = 15.993
+omni_shadow_mode = 0
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
@@ -31,4 +53,5 @@ omni_range = 15.993
 shape = SubResource("BoxShape3D_6omm2")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+gi_mode = 0
 mesh = SubResource("BoxMesh_u1p8h")
