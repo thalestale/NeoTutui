@@ -73,7 +73,6 @@ editor/current_timeline_path="res://cenas/Teste/Dialogos/Teste.dtl"
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
-window/size/mode=4
 window/size/resizable=false
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
