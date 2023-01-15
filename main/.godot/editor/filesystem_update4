@@ -1,3 +1,4 @@
-res://cenas/Tester.tscn
 res://Boot.tscn
-res://core/Camera.gd
+res://addons/dialogic/Editor/Events/styles/InputFieldsStyle.tres
+res://timelines/Chapter1.dtl
+res://timelines/Voicetest.dtl

@@ -1,7 +1,8 @@
+OmniLight3D
+WorldEnvironment
 MeshInstance3D
 CollisionShape3D
 StaticBody3D
-OmniLight3D
 Camera3D
 CSGBox3D
 AnimationTree

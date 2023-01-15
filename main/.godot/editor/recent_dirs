@@ -1,7 +1,18 @@
+res://timelines
+res://cenas/Testes
+res://ui/theme
+/home/bumba/Blender/blender-3.4.1-stable+v34.ef9ca44dee7f-linux.x86_64-release
+/snap/blender
+/var/snap/blender/3080
+/var/snap/blender/common
+/var/snap/blender/current
+/var/snap/blender
+/home/bumba/snap/blender/common
+/home/bumba/snap/blender/3080
+/home/bumba/snap/blender/current
+/home/bumba/snap/blender
 res://core
-/home/bumba/Desktop/tutui/Neo Tutui/builds
 res://cenas
 res://asset/player
 res://ui/menuprincipal/EntraNome
-res://ui/theme
 res://ui/cursor
