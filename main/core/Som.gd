@@ -12,3 +12,6 @@ func PICK() -> void:
 
 func OK() -> void:
 	$UI/Ok.play()
+
+func PASSO() -> void:
+	$MISC/Passo.play()

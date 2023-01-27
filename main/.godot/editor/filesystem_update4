@@ -1,4 +1,4 @@
+res://core/default_bus_layout.tres
+res://cenas/Tester.tscn
+res://asset/material/outline.tres
 res://Boot.tscn
-res://addons/dialogic/Editor/Events/styles/InputFieldsStyle.tres
-res://timelines/Chapter1.dtl
-res://timelines/Voicetest.dtl

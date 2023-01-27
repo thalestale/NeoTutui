@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bega2cl8qvbea"]
+
+[resource]
+blend_mode = 1
+cull_mode = 1
+depth_draw_mode = 1
+shading_mode = 0
+diffuse_mode = 3
+specular_mode = 2
+disable_ambient_light = true
+albedo_color = Color(0, 0, 0, 1)
+albedo_texture_msdf = true
+texture_filter = 5
+disable_receive_shadows = true
+grow = true
+grow_amount = 0.01
+msdf_outline_size = 5.0

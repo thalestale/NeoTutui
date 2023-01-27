@@ -2,12 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dgor6dn616pse"
-valid=false
+uid="uid://c7dur3bshwqc4"
+path="res://.godot/imported/icon.png-640930767e48f3e5cd673474004c522d.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://ui/tiledbg/water2.webp"
+source_file="res://ui/theme/icon.png"
+dest_files=["res://.godot/imported/icon.png-640930767e48f3e5cd673474004c522d.ctex"]
+
 [params]
 
 compress/mode=0

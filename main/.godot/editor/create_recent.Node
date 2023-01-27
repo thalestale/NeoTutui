@@ -1,9 +1,14 @@
+AudioStreamPlayer
+Node
 OmniLight3D
-WorldEnvironment
+SpotLight3D
 MeshInstance3D
-CollisionShape3D
+AnimatableBody3D
+RigidBody3D
 StaticBody3D
 Camera3D
+WorldEnvironment
+CollisionShape3D
 CSGBox3D
 AnimationTree
 CharacterBody3D
@@ -23,5 +28,4 @@ RichTextLabel
 ProgressBar
 HSlider
 CheckButton
-Node
 AnimationPlayer

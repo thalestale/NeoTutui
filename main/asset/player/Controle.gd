@@ -11,10 +11,10 @@ var movement_dir : Vector3
 #### AJUSTES ################################################################
 
 const SHARP_TURN_THRESHOLD : int = 120
-const MAX_SPEED : int = 5
-const TURN_SPEED : int = 40
-const ACCEL : float = 14.0
-const DEACCEL : float = 14.0
+const MAX_SPEED : int = 4
+const TURN_SPEED : int = 80
+const ACCEL : int = 20
+const DEACCEL : int = 30
 const CHAR_SCALE = Vector3(1, 1, 1)
 const AIR_ACCEL_FACTOR : float = 0.4
 const AIR_IDLE_DEACCEL : bool = false
@@ -42,6 +42,8 @@ var s : float
 var turn : float
 var a : float
 var anim
+
+var PassoSom : bool = false
 
 ################################################################################
 ################################################################################
@@ -119,9 +121,14 @@ func _physics_process(delta : float) -> void:
 	####### ANIMA ##############################################################
 	walkblend = speedhorizontal / MAX_SPEED
 	
+	if speedhorizontal > 4.3 and not PassoSom:
+		passo()
+		
+	
 	
 	if is_on_floor():
 		$AnimationTree["parameters/walk/blend_amount"] = walkblend
+		$AnimationTree["parameters/runspeed/scale"] = (walkblend * 0.5) + 0.5
 
 	#$AnimationTree["parameters/state/current"] = Anim.FLOOR  #para ativar air colocar var anim aqui
 	$AnimationTree["parameters/air_dir/blend_amount"] = clamp(-linear_velocity.y / 4 + 0.5, 0, 1)
@@ -131,6 +138,13 @@ func _physics_process(delta : float) -> void:
 ################################################################################
 ################################################################################
 
+func passo() -> void:
+	PassoSom =  true
+	
+	Som.PASSO()
+	await get_tree().create_timer(0.45).timeout
+	PassoSom = false
+	
 
 func adjust_facing(p_facing : Vector3, p_target : Vector3, p_step : float, 
 p_adjust_rate : float, current_gn : Vector3):

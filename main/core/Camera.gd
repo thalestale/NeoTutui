@@ -12,7 +12,7 @@ func _ready() -> void:
 	default_distance = get_node("../Player").global_position.distance_to(self.position)
 	self.fov = default_fov - 5
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	cam_pos = lerp(get_node("../Player").global_position, self.position, 0.97)
 	current_dis = self.position.distance_to(get_node("../Player").position)
 	self.position = Vector3(cam_pos.x, self.position.y, lerp(get_node("../Player").position.z + default_distance, self.position.z, 0.97))
@@ -32,17 +32,18 @@ func _process(delta: float) -> void:
 
 	
 func _fov_adjust(desired_fov : float) -> void:
-	if desired_fov < default_fov:
-		get_tree().create_tween().tween_property(self, 
-			"fov", 
-			desired_fov, 
-			4.0).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_IN_OUT).from_current()
-		await get_tree().create_timer(2.0).timeout
-	else:
-		get_tree().create_tween().tween_property(self, 
-			"fov", 
-			desired_fov, 
-			1.0).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_IN_OUT).from_current()
-		await get_tree().create_timer(1.0).timeout
+	#if desired_fov < default_fov:
+	#	get_tree().create_tween().tween_property(self, 
+	#		"fov", 
+	#		desired_fov, 
+	#		4.0).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_IN_OUT).from_current()
+	#	await get_tree().create_timer(2.0).timeout
+	#else:
+	#	get_tree().create_tween().tween_property(self, 
+	#		"fov", 
+	#		desired_fov, 
+	#		1.0).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_IN_OUT).from_current()
+	#	await get_tree().create_timer(1.0).timeout
 
-	is_fov_adjusting = false
+	#is_fov_adjusting = false
+	pass
