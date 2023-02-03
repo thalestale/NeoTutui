@@ -10,11 +10,11 @@ var movement_dir : Vector3
 
 #### AJUSTES ################################################################
 
-const SHARP_TURN_THRESHOLD : int = 120
+const SHARP_TURN_THRESHOLD : int = 60
 const MAX_SPEED : int = 4
-const TURN_SPEED : int = 80
+const TURN_SPEED : int = 40
 const ACCEL : int = 20
-const DEACCEL : int = 30
+const DEACCEL : int = 20
 const CHAR_SCALE = Vector3(1, 1, 1)
 const AIR_ACCEL_FACTOR : float = 0.4
 const AIR_IDLE_DEACCEL : bool = false
@@ -50,7 +50,7 @@ var PassoSom : bool = false
 
 func _physics_process(delta : float) -> void:
 
-	linear_velocity += gravity * delta
+	#linear_velocity += gravity * delta
 
 	anim = Anim.FLOOR
 
@@ -69,7 +69,7 @@ func _physics_process(delta : float) -> void:
 	############################################################################
 	
 
-	if is_on_floor():
+	if is_on_floor() or not is_on_floor():
 		sharp_turn = speedhorizontal > 0.1 and rad_to_deg(acos(direcao.dot(dirhorizontal))) > SHARP_TURN_THRESHOLD
 
 		if direcao.length() > 0.1 and not sharp_turn:
@@ -91,32 +91,33 @@ func _physics_process(delta : float) -> void:
 		facing_mesh = -mesh_xform.basis[0].normalized()
 		facing_mesh = (facing_mesh - Vector3.UP * facing_mesh.dot(Vector3.UP)).normalized()
 
-		if speedhorizontal > 0:
+		if speedhorizontal > 0.0:
 			facing_mesh = adjust_facing(facing_mesh, direcao, delta, 1.0 / speedhorizontal * TURN_SPEED, Vector3.UP)
 		m3 = Basis(-facing_mesh, Vector3.UP, -facing_mesh.cross(Vector3.UP).normalized()).scaled(CHAR_SCALE)
 
 		get_node("Armature").set_transform(Transform3D(m3, mesh_xform.origin))
 		
-	else:
-		anim = Anim.AIR
+	#else:
+	#	anim = Anim.AIR
 
-		if direcao.length() > 0.1:
-			vhorizontal += direcao * (ACCEL * AIR_ACCEL_FACTOR * delta)
-			if vhorizontal.length() > MAX_SPEED:
-				vhorizontal = vhorizontal.normalized() * MAX_SPEED
-		elif AIR_IDLE_DEACCEL:
-			speedhorizontal = speedhorizontal - (DEACCEL * AIR_ACCEL_FACTOR * delta)
-			if speedhorizontal < 0:
-				speedhorizontal = 0
-			vhorizontal = dirhorizontal * speedhorizontal
+	#	if direcao.length() > 0.1:
+	#		vhorizontal += direcao * (ACCEL * AIR_ACCEL_FACTOR * delta)
+	#		if vhorizontal.length() > MAX_SPEED:
+	#			vhorizontal = vhorizontal.normalized() * MAX_SPEED
+	#	elif AIR_IDLE_DEACCEL:
+	#		speedhorizontal = speedhorizontal - (DEACCEL * AIR_ACCEL_FACTOR * delta)
+	#		if speedhorizontal < 0:
+	#			speedhorizontal = 0
+	#		vhorizontal = dirhorizontal * speedhorizontal
 		
 	linear_velocity = vhorizontal + Vector3.UP * vvertical
 
-	if is_on_floor():
-		movement_dir = linear_velocity
+	#if is_on_floor():
+	movement_dir = linear_velocity
 	#linear_velocity = move_and_slide(linear_velocity, -gravity.normalized())
-	velocity = linear_velocity 
+	velocity = linear_velocity + gravity
 	move_and_slide()
+
 
 	####### ANIMA ##############################################################
 	walkblend = speedhorizontal / MAX_SPEED
@@ -126,7 +127,7 @@ func _physics_process(delta : float) -> void:
 		
 	
 	
-	if is_on_floor():
+	if is_on_floor() or not is_on_floor():
 		$AnimationTree["parameters/walk/blend_amount"] = walkblend
 		$AnimationTree["parameters/runspeed/scale"] = (walkblend * 0.5) + 0.5
 
@@ -141,7 +142,7 @@ func _physics_process(delta : float) -> void:
 func passo() -> void:
 	PassoSom =  true
 	
-	Som.PASSO()
+	Som.PASSO2()
 	await get_tree().create_timer(0.45).timeout
 	PassoSom = false
 	

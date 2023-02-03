@@ -15,3 +15,7 @@ func OK() -> void:
 
 func PASSO() -> void:
 	$MISC/Passo.play()
+	
+func PASSO2() -> void:
+	$MISC/Passo2.play()
+	

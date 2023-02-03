@@ -1,6 +1,6 @@
 {
     "asset" : {
-        "generator" : "Khronos glTF Blender I/O v3.3.35",
+        "generator" : "Khronos glTF Blender I/O v3.4.50",
         "version" : "2.0"
     },
     "extensionsUsed" : [
@@ -119,10 +119,10 @@
         {
             "name" : "DEF-spine.006",
             "rotation" : [
-                -0.135786771774292,
-                3.840610052208149e-10,
-                -3.3226431384036914e-08,
-                0.9907380938529968
+                -0.13578678667545319,
+                3.840610607319661e-10,
+                -3.322643493675059e-08,
+                0.9907381534576416
             ],
             "translation" : [
                 2.17834215902467e-16,
@@ -197,10 +197,10 @@
             ],
             "name" : "DEF-spine.002",
             "rotation" : [
-                -0.11327002942562103,
-                2.9875515950017473e-10,
+                -0.11327001452445984,
+                2.987551317445991e-10,
                 -2.7241373601327723e-08,
-                0.993564248085022
+                0.9935643076896667
             ],
             "scale" : [
                 1,
@@ -220,7 +220,7 @@
             "name" : "DEF-spine.001",
             "rotation" : [
                 -0.0909651666879654,
-                1.6285656156966866e-10,
+                1.6285667259197112e-10,
                 -2.1834841490431245e-08,
                 0.9958540797233582
             ],
@@ -255,10 +255,10 @@
         {
             "name" : "DEF-pelvis.L",
             "rotation" : [
-                -0.050610724836587906,
-                -0.7361857295036316,
-                -0.4112311005592346,
-                0.5351243615150452
+                -0.05061084032058716,
+                -0.7361856698989868,
+                -0.41123101115226746,
+                0.5351245403289795
             ],
             "scale" : [
                 1.000000238418579,
@@ -274,10 +274,10 @@
         {
             "name" : "DEF-pelvis.R",
             "rotation" : [
-                -0.050610724836587906,
-                0.7361857295036316,
-                0.4112311005592346,
-                0.5351243615150452
+                -0.05061084032058716,
+                0.7361856698989868,
+                0.41123101115226746,
+                0.5351245403289795
             ],
             "scale" : [
                 1.000000238418579,
@@ -293,10 +293,10 @@
         {
             "name" : "DEF-toe.L",
             "rotation" : [
-                0.00017991608183365315,
-                0.979885458946228,
-                -0.1995585709810257,
-                0.000901508261449635
+                0.00017991606728173792,
+                0.9798855185508728,
+                -0.1995585560798645,
+                0.0009015082032419741
             ],
             "scale" : [
                 0.9999998807907104,
@@ -315,9 +315,9 @@
             ],
             "name" : "DEF-foot.L",
             "rotation" : [
-                -0.6082011461257935,
+                -0.6082012057304382,
                 0.07216861099004745,
-                0.05454178526997566,
+                0.05454178899526596,
                 0.7886115908622742
             ],
             "scale" : [
@@ -417,10 +417,10 @@
         {
             "name" : "DEF-toe.R",
             "rotation" : [
-                0.00017991980712395161,
-                -0.979885458946228,
-                0.1995585709810257,
-                0.0009017420816235244
+                0.00017991977802012116,
+                -0.9798855185508728,
+                0.1995585560798645,
+                0.0009017419652082026
             ],
             "scale" : [
                 0.9999999403953552,
@@ -541,7 +541,7 @@
         {
             "name" : "DEF-shoulder.L",
             "rotation" : [
-                -0.5924825072288513,
+                -0.5924825668334961,
                 -0.3128429353237152,
                 -0.2597920894622803,
                 0.6954148411750793
@@ -638,8 +638,8 @@
             ],
             "name" : "DEF-upper_arm.L",
             "rotation" : [
-                -0.12290488928556442,
-                -0.10975509881973267,
+                -0.12290486693382263,
+                -0.10975509136915207,
                 -0.7732775807380676,
                 0.6122826337814331
             ],
@@ -657,7 +657,7 @@
         {
             "name" : "DEF-shoulder.R",
             "rotation" : [
-                -0.5924825072288513,
+                -0.5924825668334961,
                 0.3128429353237152,
                 0.2597920894622803,
                 0.6954148411750793
@@ -754,8 +754,8 @@
             ],
             "name" : "DEF-upper_arm.R",
             "rotation" : [
-                -0.12290488928556442,
-                0.10975509881973267,
+                -0.12290486693382263,
+                0.10975509136915207,
                 0.7732775807380676,
                 0.6122826337814331
             ],
@@ -18755,9 +18755,9 @@
                 {
                     "attributes" : {
                         "POSITION" : 0,
-                        "NORMAL" : 1,
-                        "TANGENT" : 2,
-                        "TEXCOORD_0" : 3,
+                        "TEXCOORD_0" : 1,
+                        "NORMAL" : 2,
+                        "TANGENT" : 3,
                         "JOINTS_0" : 4,
                         "JOINTS_1" : 5,
                         "JOINTS_2" : 6,
@@ -18778,9 +18778,9 @@
                 {
                     "attributes" : {
                         "POSITION" : 14,
-                        "NORMAL" : 15,
-                        "TANGENT" : 16,
-                        "TEXCOORD_0" : 17,
+                        "TEXCOORD_0" : 15,
+                        "NORMAL" : 16,
+                        "TANGENT" : 17,
                         "JOINTS_0" : 18,
                         "WEIGHTS_0" : 19
                     },
@@ -18795,9 +18795,9 @@
                 {
                     "attributes" : {
                         "POSITION" : 21,
-                        "NORMAL" : 22,
-                        "TANGENT" : 23,
-                        "TEXCOORD_0" : 24,
+                        "TEXCOORD_0" : 22,
+                        "NORMAL" : 23,
+                        "TANGENT" : 24,
                         "JOINTS_0" : 25,
                         "JOINTS_1" : 26,
                         "JOINTS_2" : 27,
@@ -18816,9 +18816,9 @@
                 {
                     "attributes" : {
                         "POSITION" : 32,
-                        "NORMAL" : 33,
-                        "TANGENT" : 34,
-                        "TEXCOORD_0" : 35,
+                        "TEXCOORD_0" : 33,
+                        "NORMAL" : 34,
+                        "TANGENT" : 35,
                         "JOINTS_0" : 36,
                         "JOINTS_1" : 37,
                         "JOINTS_2" : 38,
@@ -18837,8 +18837,8 @@
                 {
                     "attributes" : {
                         "POSITION" : 43,
-                        "NORMAL" : 44,
-                        "TEXCOORD_0" : 45,
+                        "TEXCOORD_0" : 44,
+                        "NORMAL" : 45,
                         "JOINTS_0" : 46,
                         "JOINTS_1" : 47,
                         "WEIGHTS_0" : 48,
@@ -18855,9 +18855,9 @@
                 {
                     "attributes" : {
                         "POSITION" : 51,
-                        "NORMAL" : 52,
-                        "TANGENT" : 53,
-                        "TEXCOORD_0" : 54,
+                        "TEXCOORD_0" : 52,
+                        "NORMAL" : 53,
+                        "TANGENT" : 54,
                         "JOINTS_0" : 55,
                         "WEIGHTS_0" : 56
                     },
@@ -18872,8 +18872,8 @@
                 {
                     "attributes" : {
                         "POSITION" : 58,
-                        "NORMAL" : 59,
-                        "TEXCOORD_0" : 60,
+                        "TEXCOORD_0" : 59,
+                        "NORMAL" : 60,
                         "JOINTS_0" : 61,
                         "WEIGHTS_0" : 62
                     },
@@ -18947,19 +18947,19 @@
             "bufferView" : 1,
             "componentType" : 5126,
             "count" : 541,
-            "type" : "VEC3"
+            "type" : "VEC2"
         },
         {
             "bufferView" : 2,
             "componentType" : 5126,
             "count" : 541,
-            "type" : "VEC4"
+            "type" : "VEC3"
         },
         {
             "bufferView" : 3,
             "componentType" : 5126,
             "count" : 541,
-            "type" : "VEC2"
+            "type" : "VEC4"
         },
         {
             "bufferView" : 4,
@@ -19041,19 +19041,19 @@
             "bufferView" : 15,
             "componentType" : 5126,
             "count" : 1068,
-            "type" : "VEC3"
+            "type" : "VEC2"
         },
         {
             "bufferView" : 16,
             "componentType" : 5126,
             "count" : 1068,
-            "type" : "VEC4"
+            "type" : "VEC3"
         },
         {
             "bufferView" : 17,
             "componentType" : 5126,
             "count" : 1068,
-            "type" : "VEC2"
+            "type" : "VEC4"
         },
         {
             "bufferView" : 18,
@@ -19093,19 +19093,19 @@
             "bufferView" : 22,
             "componentType" : 5126,
             "count" : 651,
-            "type" : "VEC3"
+            "type" : "VEC2"
         },
         {
             "bufferView" : 23,
             "componentType" : 5126,
             "count" : 651,
-            "type" : "VEC4"
+            "type" : "VEC3"
         },
         {
             "bufferView" : 24,
             "componentType" : 5126,
             "count" : 651,
-            "type" : "VEC2"
+            "type" : "VEC4"
         },
         {
             "bufferView" : 25,
@@ -19169,19 +19169,19 @@
             "bufferView" : 33,
             "componentType" : 5126,
             "count" : 786,
-            "type" : "VEC3"
+            "type" : "VEC2"
         },
         {
             "bufferView" : 34,
             "componentType" : 5126,
             "count" : 786,
-            "type" : "VEC4"
+            "type" : "VEC3"
         },
         {
             "bufferView" : 35,
             "componentType" : 5126,
             "count" : 786,
-            "type" : "VEC2"
+            "type" : "VEC4"
         },
         {
             "bufferView" : 36,
@@ -19245,13 +19245,13 @@
             "bufferView" : 44,
             "componentType" : 5126,
             "count" : 290,
-            "type" : "VEC3"
+            "type" : "VEC2"
         },
         {
             "bufferView" : 45,
             "componentType" : 5126,
             "count" : 290,
-            "type" : "VEC2"
+            "type" : "VEC3"
         },
         {
             "bufferView" : 46,
@@ -19303,19 +19303,19 @@
             "bufferView" : 52,
             "componentType" : 5126,
             "count" : 104,
-            "type" : "VEC3"
+            "type" : "VEC2"
         },
         {
             "bufferView" : 53,
             "componentType" : 5126,
             "count" : 104,
-            "type" : "VEC4"
+            "type" : "VEC3"
         },
         {
             "bufferView" : 54,
             "componentType" : 5126,
             "count" : 104,
-            "type" : "VEC2"
+            "type" : "VEC4"
         },
         {
             "bufferView" : 55,
@@ -19355,13 +19355,13 @@
             "bufferView" : 59,
             "componentType" : 5126,
             "count" : 294,
-            "type" : "VEC3"
+            "type" : "VEC2"
         },
         {
             "bufferView" : 60,
             "componentType" : 5126,
             "count" : 294,
-            "type" : "VEC2"
+            "type" : "VEC3"
         },
         {
             "bufferView" : 61,
@@ -28283,20 +28283,20 @@
         },
         {
             "buffer" : 0,
-            "byteLength" : 6492,
+            "byteLength" : 4328,
             "byteOffset" : 6492,
             "target" : 34962
         },
         {
             "buffer" : 0,
-            "byteLength" : 8656,
-            "byteOffset" : 12984,
+            "byteLength" : 6492,
+            "byteOffset" : 10820,
             "target" : 34962
         },
         {
             "buffer" : 0,
-            "byteLength" : 4328,
-            "byteOffset" : 21640,
+            "byteLength" : 8656,
+            "byteOffset" : 17312,
             "target" : 34962
         },
         {
@@ -28366,20 +28366,20 @@
         },
         {
             "buffer" : 0,
-            "byteLength" : 12816,
+            "byteLength" : 8544,
             "byteOffset" : 88408,
             "target" : 34962
         },
         {
             "buffer" : 0,
-            "byteLength" : 17088,
-            "byteOffset" : 101224,
+            "byteLength" : 12816,
+            "byteOffset" : 96952,
             "target" : 34962
         },
         {
             "buffer" : 0,
-            "byteLength" : 8544,
-            "byteOffset" : 118312,
+            "byteLength" : 17088,
+            "byteOffset" : 109768,
             "target" : 34962
         },
         {
@@ -28408,20 +28408,20 @@
         },
         {
             "buffer" : 0,
-            "byteLength" : 7812,
+            "byteLength" : 5208,
             "byteOffset" : 159940,
             "target" : 34962
         },
         {
             "buffer" : 0,
-            "byteLength" : 10416,
-            "byteOffset" : 167752,
+            "byteLength" : 7812,
+            "byteOffset" : 165148,
             "target" : 34962
         },
         {
             "buffer" : 0,
-            "byteLength" : 5208,
-            "byteOffset" : 178168,
+            "byteLength" : 10416,
+            "byteOffset" : 172960,
             "target" : 34962
         },
         {
@@ -28474,20 +28474,20 @@
         },
         {
             "buffer" : 0,
-            "byteLength" : 9432,
+            "byteLength" : 6288,
             "byteOffset" : 236452,
             "target" : 34962
         },
         {
             "buffer" : 0,
-            "byteLength" : 12576,
-            "byteOffset" : 245884,
+            "byteLength" : 9432,
+            "byteOffset" : 242740,
             "target" : 34962
         },
         {
             "buffer" : 0,
-            "byteLength" : 6288,
-            "byteOffset" : 258460,
+            "byteLength" : 12576,
+            "byteOffset" : 252172,
             "target" : 34962
         },
         {
@@ -28540,14 +28540,14 @@
         },
         {
             "buffer" : 0,
-            "byteLength" : 3480,
+            "byteLength" : 2320,
             "byteOffset" : 320752,
             "target" : 34962
         },
         {
             "buffer" : 0,
-            "byteLength" : 2320,
-            "byteOffset" : 324232,
+            "byteLength" : 3480,
+            "byteOffset" : 323072,
             "target" : 34962
         },
         {
@@ -28588,20 +28588,20 @@
         },
         {
             "buffer" : 0,
-            "byteLength" : 1248,
+            "byteLength" : 832,
             "byteOffset" : 341008,
             "target" : 34962
         },
         {
             "buffer" : 0,
-            "byteLength" : 1664,
-            "byteOffset" : 342256,
+            "byteLength" : 1248,
+            "byteOffset" : 341840,
             "target" : 34962
         },
         {
             "buffer" : 0,
-            "byteLength" : 832,
-            "byteOffset" : 343920,
+            "byteLength" : 1664,
+            "byteOffset" : 343088,
             "target" : 34962
         },
         {
@@ -28630,14 +28630,14 @@
         },
         {
             "buffer" : 0,
-            "byteLength" : 3528,
+            "byteLength" : 2352,
             "byteOffset" : 351008,
             "target" : 34962
         },
         {
             "buffer" : 0,
-            "byteLength" : 2352,
-            "byteOffset" : 354536,
+            "byteLength" : 3528,
+            "byteOffset" : 353360,
             "target" : 34962
         },
         {

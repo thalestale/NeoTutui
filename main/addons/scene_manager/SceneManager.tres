@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://uhbge0j4mkj0"]
+
+[ext_resource type="Shader" path="res://addons/scene_manager/Dissolve2d.gdshader" id="1_s58b1"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_hf775"]
+
+[resource]
+shader = ExtResource("1_s58b1")
+shader_parameter/dissolve_amount = 0.0
+shader_parameter/fade_color = Color(0, 0, 0, 1)
+shader_parameter/fade = false
+shader_parameter/inverted = false
+shader_parameter/dissolve_texture = SubResource("PlaceholderTexture2D_hf775")

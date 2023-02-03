@@ -13,5 +13,5 @@ albedo_texture_msdf = true
 texture_filter = 5
 disable_receive_shadows = true
 grow = true
-grow_amount = 0.01
+grow_amount = 0.02
 msdf_outline_size = 5.0

@@ -5,13 +5,13 @@
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_mf2m0"]
 
-[sub_resource type="Sky" id="Sky_b8svq"]
+[sub_resource type="Sky" id="Sky_bn0rp"]
 sky_material = SubResource("ProceduralSkyMaterial_mf2m0")
 radiance_size = 0
 
 [sub_resource type="Environment" id="Environment_m7yup"]
 background_energy_multiplier = 0.0
-sky = SubResource("Sky_b8svq")
+sky = SubResource("Sky_bn0rp")
 ambient_light_source = 1
 reflected_light_source = 1
 tonemap_exposure = 1.3

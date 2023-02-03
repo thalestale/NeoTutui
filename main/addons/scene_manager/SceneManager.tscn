@@ -1,15 +1,15 @@
 [gd_scene load_steps=6 format=3 uid="uid://j20v4cg7v8m1"]
 
 [ext_resource type="Script" path="res://addons/scene_manager/SceneManager.gd" id="1_22br8"]
-[ext_resource type="Shader" path="res://addons/scene_manager/Dissolve2d.gdshader" id="2_853wq"]
+[ext_resource type="Shader" path="res://addons/scene_manager/Dissolve2d.gdshader" id="2_5bxc0"]
 [ext_resource type="Animation" uid="uid://dxr1r78uxitcq" path="res://addons/scene_manager/ShaderFade.tres" id="5_anecj"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_0imdi"]
-shader = ExtResource("2_853wq")
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_px3k1"]
+shader = ExtResource("2_5bxc0")
 shader_parameter/dissolve_amount = 0.0
 shader_parameter/fade_color = Color(0, 0, 0, 1)
-shader_parameter/fade = null
-shader_parameter/inverted = null
+shader_parameter/fade = false
+shader_parameter/inverted = false
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5v76t"]
 _data = {
@@ -23,7 +23,7 @@ script = ExtResource("1_22br8")
 layer = 3
 
 [node name="ShaderFade" type="ColorRect" parent="CanvasLayer"]
-material = SubResource("ShaderMaterial_0imdi")
+material = SubResource("ShaderMaterial_px3k1")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

@@ -140,7 +140,7 @@ func _replace_scene(path):
 
 func _fade_out(options):
 	is_transitioning = true
-	_animation_player.playback_speed = options["speed"]
+	_animation_player.speed_scale = options["speed"]
 
 	_shader_blend_rect.material.set_shader_parameter(
 		"dissolve_texture", options["pattern_enter"]
@@ -154,7 +154,6 @@ func _fade_out(options):
 
 	await _animation_player.animation_finished
 	emit_signal("fade_complete")
-
 
 func _fade_in(options):
 	_shader_blend_rect.material.set_shader_parameter(

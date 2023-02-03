@@ -8,3 +8,6 @@ func _ready() -> void:
 			"pattern_enter" : "fade", 
 			"ease" : 2.0, 
 			"speed" : 2.0})
+			
+	
+	
