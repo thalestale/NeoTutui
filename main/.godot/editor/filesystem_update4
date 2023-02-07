@@ -1,1 +1,3 @@
 res://core/default_bus_layout.tres
+res://Boot.tscn
+res://addons/scene_manager/Dissolve2d.gdshader
