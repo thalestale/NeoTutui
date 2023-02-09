@@ -26,7 +26,7 @@
      showgrid="false"
      inkscape:zoom="1.2347277"
      inkscape:cx="213.81232"
-     inkscape:cy="95.56763"
+     inkscape:cy="32.395807"
      inkscape:window-width="1280"
      inkscape:window-height="744"
      inkscape:window-x="0"
@@ -34,13 +34,50 @@
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1" />
   <defs
-     id="defs2" />
+     id="defs2">
+    <marker
+       style="overflow:visible"
+       id="marker7009"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="X"
+       markerWidth="2"
+       markerHeight="2"
+       viewBox="0 0 6.7071068 6.7071068"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:none;stroke:context-stroke;stroke-width:1"
+         d="M -3,3 3,-3 M 3,3 -3,-3"
+         id="path7007" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="X"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="X"
+       markerWidth="2"
+       markerHeight="2"
+       viewBox="0 0 6.7071068 6.7071068"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:none;stroke:context-stroke;stroke-width:1"
+         d="m 3,3 -6,-6 m 0,6 6,-6"
+         id="path12054" />
+    </marker>
+  </defs>
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
     <rect
-       style="fill:#ffffff;stroke:#000000;stroke-width:0.865;fill-opacity:1;stroke-opacity:1"
+       style="fill:#000000;stroke:#ffffff;stroke-width:1.165;fill-opacity:1;stroke-opacity:1;stroke-dasharray:0.29125,0.29125;stroke-dashoffset:0"
        id="rect234"
        width="104.26399"
        height="51.130562"
@@ -48,7 +85,7 @@
        y="0.72860384"
        ry="3.9392123" />
     <rect
-       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.846405;stroke-opacity:1"
+       style="fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:1.146;stroke-opacity:1;stroke-dasharray:none;stroke-linecap:round;paint-order:stroke fill markers;marker-mid:url(#marker7009);marker-start:url(#X)"
        id="rect7591"
        width="101.07037"
        height="47.39875"

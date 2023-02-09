@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 
-@onready var balloon: TextureRect = $Balloon
+@onready var balloon: ColorRect = $Balloon
 @onready var margin: MarginContainer = $Balloon/Margin
 @onready var character_label: RichTextLabel = $Balloon/Margin/VBox/CharacterLabel
 @onready var dialogue_label := $Balloon/Margin/VBox/DialogueLabel
@@ -23,8 +23,6 @@ var dialogue_line: DialogueLine:
 		is_waiting_for_input = false
 		
 		if not next_dialogue_line:
-			Anima.FECHA($Balloon, "mute")
-			await get_tree().create_timer(0.1).timeout
 			queue_free()
 			return
 		
@@ -82,7 +80,7 @@ var dialogue_line: DialogueLine:
 func _ready() -> void:
 	response_template.hide()
 	balloon.hide()
-	balloon.custom_minimum_size.x = balloon.get_viewport_rect().size.x / 3
+	balloon.custom_minimum_size.x = balloon.get_viewport_rect().size.x
 	
 	Engine.get_singleton("DialogueManager").mutation.connect(_on_mutation)
 
@@ -161,7 +159,7 @@ func handle_resize() -> void:
 	# Force a resize on only the height
 	balloon.size.y = 0
 	var viewport_size = balloon.get_viewport_rect().size
-	balloon.global_position = Vector2((viewport_size.x - balloon.size.x) * 0.5, viewport_size.y - balloon.size.y - 75)
+	balloon.global_position = Vector2((viewport_size.x - balloon.size.x) * 0.5, viewport_size.y - balloon.size.y)
 
 
 ### Signals

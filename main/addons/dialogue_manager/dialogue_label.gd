@@ -36,7 +36,6 @@ var has_finished: bool = false
 
 func _process(delta: float) -> void:
 	if is_typing:
-		Som.PASSO()
 		# Type out text
 		if visible_ratio < 1:
 			# If cancel is pressed then skip typing it out
