@@ -33,7 +33,7 @@ SceneManager="*res://addons/scene_manager/SceneManager.tscn"
 Change="*res://core/ChangeScene.gd"
 Data="*res://core/Data.tscn"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
-Musica="*res://core/Musica.gd"
+MUSICA="*res://core/Musica.tscn"
 
 [compression]
 
@@ -45,9 +45,10 @@ states=["Som"]
 
 [display]
 
-window/size/viewport_width=1280
-window/size/viewport_height=720
+window/size/viewport_width=1120
+window/size/viewport_height=630
 window/size/resizable=false
+window/vsync/vsync_mode=2
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 
@@ -83,7 +84,7 @@ panic={
 
 occlusion_culling/bvh_build_quality=1
 renderer/rendering_method="gl_compatibility"
-textures/webp_compression/compression_method=3
+textures/webp_compression/compression_method=4
 lights_and_shadows/use_physical_light_units=true
 lights_and_shadows/directional_shadow/soft_shadow_filter_quality=0
 lights_and_shadows/positional_shadow/soft_shadow_filter_quality=0
@@ -93,6 +94,6 @@ environment/ssao/quality=0
 environment/ssil/quality=0
 anti_aliasing/screen_space_roughness_limiter/enabled=false
 textures/decals/filter=0
-textures/light_projectors/filter=0
+textures/light_projectors/filter=1
 environment/glow/upscale_mode=0
 textures/canvas_textures/default_texture_filter=0

@@ -350,7 +350,7 @@ mesh = SubResource("ArrayMesh_fmr78")
 skeleton = NodePath("")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Cogumelo1"]
-transform = Transform3D(2.63608, 0, 0, 0, 2.63608, 0, 0, 0, 2.63608, 0, 1.4057, 0.640419)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4057, 0.640419)
 light_intensity_lumens = 200.0
 light_color = Color(0.298039, 0.380392, 0.211765, 1)
 

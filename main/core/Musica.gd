@@ -1,12 +1,12 @@
 extends Node
 
-var NodeMusica 
-var MusicaAnterior
-var MusicaAnteriorString
+var NodeMusica : Node
+var MusicaAnterior : Node
+var MusicaAnteriorString : String
 
 func Tocar(musica : String, transicao : float) -> void:
 	#baixa o volume da musica que tava tocando antes
-	if MusicaAnterior == get_node("/root/Musica/Luneta"):
+	if MusicaAnterior == $Luneta:
 		MusicaAnteriorString = "LUNETA"
 	else:
 		pass
