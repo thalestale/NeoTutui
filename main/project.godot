@@ -33,6 +33,7 @@ SceneManager="*res://addons/scene_manager/SceneManager.tscn"
 Change="*res://core/ChangeScene.gd"
 Data="*res://core/Data.tscn"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+Musica="*res://core/Musica.gd"
 
 [compression]
 

@@ -1,1 +1,5 @@
 res://core/default_bus_layout.tres
+res://cenas/Testes/escada.gd
+res://core/Musica.tscn
+res://cenas/Testes/escada.tscn
+res://core/Musica.gd

@@ -1,3 +1,5 @@
+AudioStreamPlayer
+Node
 CollisionShape3D
 Area3D
 TextureRect
@@ -9,9 +11,7 @@ AnimatableBody3D
 CollisionPolygon3D
 StaticBody3D
 RigidBody3D
-Node
 Camera3D
-AudioStreamPlayer
 SpotLight3D
 WorldEnvironment
 CSGBox3D

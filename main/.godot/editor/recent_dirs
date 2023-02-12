@@ -1,3 +1,4 @@
+res://core
 /home/bumba/Desktop/Tutui/build
 res://addons/scene_manager
 res://asset/material
@@ -14,7 +15,6 @@ res://ui/theme
 /home/bumba/snap/blender/3080
 /home/bumba/snap/blender/current
 /home/bumba/snap/blender
-res://core
 res://cenas
 res://asset/player
 res://ui/menuprincipal/EntraNome
