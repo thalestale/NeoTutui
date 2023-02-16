@@ -6,6 +6,7 @@ uniform vec4 fade_color : source_color = vec4(1.0, 1.0, 1.0, 1.0);
 uniform bool fade = false;
 uniform bool inverted = false;
 
+
 void fragment() {
 	if (dissolve_amount < 0.0001 || dissolve_amount > 0.9999 || fade) {
 		COLOR = vec4(fade_color.rgb, dissolve_amount);
