@@ -241,7 +241,7 @@ func parse(text: String) -> int:
 				line["text"] = ": ".join(bits).replace("!ESCAPED_COLON!", ":")
 			else:
 				line["character"] = ""
-				line["character_replacements"] = []
+				line["character_replacements"] = [] as Array[Dictionary]
 				line["text"] = l.replace("!ESCAPED_COLON!", ":")
 			
 			line["text_replacements"] = extract_dialogue_replacements(line.text)
@@ -995,7 +995,7 @@ func find_bbcode_positions_in_string(string: String, find_all: bool = true) -> A
 	return positions
 
 
-func tokenise(text: String, line_type: String) -> Array[Dictionary]:
+func tokenise(text: String, line_type: String) -> Array:
 	var tokens: Array[Dictionary] = []
 	var limit: int = 0
 	while text.strip_edges() != "" and limit < 1000:

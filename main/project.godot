@@ -32,8 +32,8 @@ Mouse="*res://ui/cursor/Mouse.tscn"
 SceneManager="*res://addons/scene_manager/SceneManager.tscn"
 Change="*res://core/ChangeScene.gd"
 Data="*res://core/Data.tscn"
-DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 MUSICA="*res://core/Musica.tscn"
+DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 
 [compression]
 
