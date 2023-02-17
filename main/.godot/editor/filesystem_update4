@@ -1,5 +1,6 @@
 res://core/default_bus_layout.tres
-res://addons/scene_manager/Dissolve2d.gdshader
 res://cenas/Testes/escada.tscn
-res://addons/scene_manager/SceneManager.gd
+res://asset/material/pedra.tres
+res://asset/material/outline.tres
 res://Boot.tscn
+res://core/Musica.tscn
