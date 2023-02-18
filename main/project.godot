@@ -34,6 +34,7 @@ Change="*res://core/ChangeScene.gd"
 Data="*res://core/Data.tscn"
 MUSICA="*res://core/Musica.tscn"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+Dialogo="*res://core/Dialogo.gd"
 
 [compression]
 

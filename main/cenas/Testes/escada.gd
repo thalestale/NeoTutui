@@ -10,7 +10,7 @@ func _ready() -> void:
 func _input(_event) -> void:
 	if Input.is_action_just_pressed("ui_accept") and playercogu:
 		set_process_input(false)
-		DialogueManager.show_example_dialogue_balloon(resource, title)
+		Dialogo.DIALOGO(resource, title)
 		await DialogueManager.dialogue_finished
 		set_process_input(true)
 
@@ -22,3 +22,4 @@ func _on_area_3d_body_entered(body) -> void:
 func _on_area_3d_body_exited(body) -> void:
 	if body == $Player:
 		playercogu = false
+		

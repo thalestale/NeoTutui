@@ -1,8 +1,8 @@
+TextureRect
 AudioStreamPlayer
 Node
 CollisionShape3D
 Area3D
-TextureRect
 GPUParticles3D
 CPUParticles3D
 OmniLight3D
