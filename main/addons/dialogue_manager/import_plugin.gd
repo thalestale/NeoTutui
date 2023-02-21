@@ -58,7 +58,7 @@ func _get_option_visibility(path: String, option_name: StringName, options: Dict
 	return true
 
 
-func _import(source_file: String, save_path: String, options: Dictionary, platform_variants: Array, gen_files: Array) -> int:
+func _import(source_file: String, save_path: String, options: Dictionary, platform_variants: Array, gen_files: Array) -> Error:
 	return compile_file(source_file, "%s.%s" % [save_path, _get_save_extension()])
 
 

@@ -6,7 +6,7 @@ func HORIZONTAL(path : String) -> void:
 			"pattern" : "horizontal", 
 			"ease" : 2.0, 
 			"speed" : 2.0, 
-			"wait_time" : 0.1, 
+			"wait_time" : 0.5, 
 			"color" : Color("black")	
 		})
 	
