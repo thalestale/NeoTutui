@@ -9,7 +9,6 @@ signal bridge_get_next_dialogue_line_completed(line)
 
 const DialogueConstants = preload("res://addons/dialogue_manager/constants.gd")
 const DialogueSettings = preload("res://addons/dialogue_manager/components/settings.gd")
-const DialogueParser = preload("res://addons/dialogue_manager/components/parser.gd")
 const DialogueLine = preload("res://addons/dialogue_manager/dialogue_line.gd")
 const DialogueResponse = preload("res://addons/dialogue_manager/dialogue_response.gd")
 
@@ -97,9 +96,9 @@ func get_resolved_text(text: String, replacements: Array, extra_game_states: Arr
 
 ## Generate a dialogue resource on the fly from some text
 func create_resource_from_text(text: String) -> Resource:
-	var parser: DialogueParser = DialogueParser.new()
+	var parser: DialogueManagerParser = DialogueManagerParser.new()
 	parser.parse(text)
-	var results: Dictionary = parser.get_data()
+	var results: DialogueManagerParseResult = parser.get_data()
 	var errors: Array[Dictionary] = parser.get_errors()
 	parser.free()
 	
@@ -211,15 +210,24 @@ func get_line(resource: DialogueResource, key: String, extra_game_states: Array)
 	return line
 
 
+# Translate a string
+func translate(data: Dictionary) -> String:
+	if not auto_translate:
+		return data.text
+	
+	if data.translation_key == "" or data.translation_key == data.text:
+		return tr(data.text)
+	else:
+		return tr(data.translation_key, StringName(data.text))
+
+
 # Create a line of dialogue
 func create_dialogue_line(data: Dictionary, extra_game_states: Array) -> DialogueLine:
 	match data.type:
 		DialogueConstants.TYPE_DIALOGUE:
 			# Our bbcodes need to be process after text has been resolved so that the markers are at the correct index
-			var text = await get_resolved_text(tr(data.translation_key, StringName(data.text)) if auto_translate else data.text, data.text_replacements, extra_game_states)
-			var parser = DialogueParser.new()
-			var markers = parser.extract_markers(text)
-			parser.free()
+			var text: String = await get_resolved_text(translate(data), data.text_replacements, extra_game_states)
+			var markers: Dictionary = DialogueManagerParser.extract_markers_from_string(text)
 			
 			return DialogueLine.new({
 				type = DialogueConstants.TYPE_DIALOGUE,
@@ -260,7 +268,7 @@ func create_response(data: Dictionary, extra_game_states: Array) -> DialogueResp
 		type = DialogueConstants.TYPE_RESPONSE,
 		next_id = data.next_id,
 		is_allowed = await check_condition(data, extra_game_states),
-		text = await get_resolved_text(tr(data.translation_key, StringName(data.text)) if auto_translate else data.text, data.text_replacements, extra_game_states),
+		text = await get_resolved_text(translate(data), data.text_replacements, extra_game_states),
 		text_replacements = data.text_replacements,
 		translation_key = data.translation_key
 	})
@@ -271,7 +279,7 @@ func get_game_states(extra_game_states: Array) -> Array:
 	var current_scene: Node = get_tree().current_scene
 	var unique_states: Array = []
 	for state in extra_game_states + [current_scene] + game_states:
-		if not unique_states.has(state):
+		if state != null and not unique_states.has(state):
 			unique_states.append(state)
 	return unique_states
 

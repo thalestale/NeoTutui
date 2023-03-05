@@ -8,14 +8,41 @@ const DialogueConstants = preload("res://addons/dialogue_manager/constants.gd")
 ### Editor config
 
 
+static func prepare() -> void:
+	# Migrate previous keys
+	for key in [
+		"states", 
+		"missing_translations_are_errors", 
+		"wrap_lines", 
+		"new_with_template", 
+		"custom_test_scene_path"
+	]:
+		if ProjectSettings.has_setting("dialogue_manager/%s" % key):
+			var value = ProjectSettings.get_setting("dialogue_manager/%s" % key)
+			ProjectSettings.set_setting("dialogue_manager/%s" % key, null)
+			set_setting(key, value)
+	
+	# Set up defaults
+	ProjectSettings.set_setting("dialogue_manager/general/states", ProjectSettings.get_setting("dialogue_manager/general/states", []))
+	ProjectSettings.set_initial_value("dialogue_manager/general/states", [])
+	ProjectSettings.set_setting("dialogue_manager/general/missing_translations_are_errors", ProjectSettings.get_setting("dialogue_manager/general/missing_translations_are_errors", false))
+	ProjectSettings.set_initial_value("dialogue_manager/general/missing_translations_are_errors", false)
+	ProjectSettings.set_setting("dialogue_manager/general/wrap_lines", ProjectSettings.get_setting("dialogue_manager/general/wrap_lines", false))
+	ProjectSettings.set_initial_value("dialogue_manager/general/wrap_lines", false)
+	ProjectSettings.set_setting("dialogue_manager/general/new_with_template", ProjectSettings.get_setting("dialogue_manager/general/new_with_template", true))
+	ProjectSettings.set_initial_value("dialogue_manager/general/new_with_template", true)
+	ProjectSettings.set_setting("dialogue_manager/general/custom_test_scene_path", ProjectSettings.get_setting("dialogue_manager/general/custom_test_scene_path", "res://addons/dialogue_manager/test_scene.tscn"))
+	ProjectSettings.set_initial_value("dialogue_manager/general/custom_test_scene_path", "res://addons/dialogue_manager/test_scene.tscn")
+
+
 static func set_setting(key: String, value) -> void:
-	ProjectSettings.set_setting("dialogue_manager/%s" % key, value)
+	ProjectSettings.set_setting("dialogue_manager/general/%s" % key, value)
 	ProjectSettings.save()
 
 
 static func get_setting(key: String, default):
-	if ProjectSettings.has_setting("dialogue_manager/%s" % key):
-		return ProjectSettings.get_setting("dialogue_manager/%s" % key)
+	if ProjectSettings.has_setting("dialogue_manager/general/%s" % key):
+		return ProjectSettings.get_setting("dialogue_manager/general/%s" % key)
 	else:
 		return default
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://c30lyygi4wtnf"]
+[gd_scene load_steps=61 format=3 uid="uid://c30lyygi4wtnf"]
 
 [ext_resource type="Texture2D" uid="uid://c14oei3chfcbt" path="res://cenas/Parte1/Rose/Blend/textures/Untitled.001.png" id="1_vtgis"]
 [ext_resource type="Texture2D" uid="uid://c5628rqm0o1h4" path="res://cenas/Parte1/Rose/Blend/textures/Untitled.004.png" id="2_rc54i"]
@@ -8,8 +8,11 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_twodt"]
 resource_name = "Tijolo"
+diffuse_mode = 3
+specular_mode = 2
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("1_vtgis")
+metallic_specular = 0.46
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_onp3d"]
 _surfaces = [{
@@ -46,6 +49,8 @@ data = PackedVector3Array(-6.4579, 0.0032, 2.2895, -6.4579, 2.6343, 1.4652, -6.4
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_408yf"]
 resource_name = "Madeira 01"
+diffuse_mode = 3
+specular_mode = 1
 vertex_color_use_as_albedo = true
 albedo_color = Color(0.353275, 0.174205, 0.178704, 1)
 roughness = 0.811688
@@ -415,6 +420,8 @@ shadow_mesh = SubResource("ArrayMesh_2gyok")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v5umx"]
 resource_name = "pc"
 cull_mode = 2
+diffuse_mode = 3
+specular_mode = 1
 vertex_color_use_as_albedo = true
 albedo_color = Color(0.406599, 0.406599, 0.406599, 1)
 roughness = 0.5
@@ -590,10 +597,16 @@ shadow_mesh = SubResource("ArrayMesh_4mp6x")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bi5mc"]
 resource_name = "Material.003"
 cull_mode = 2
+diffuse_mode = 3
+specular_mode = 1
 vertex_color_use_as_albedo = true
 albedo_color = Color(0.906332, 0.698748, 0.494665, 1)
-metallic = 1.0
-roughness = 0.126667
+metallic = 0.79
+metallic_specular = 0.69
+roughness = 0.13
+rim_tint = 1.0
+backlight_enabled = true
+backlight = Color(0.862745, 0.462745, 0, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_frntk"]
 resource_name = "Material.001"
@@ -781,6 +794,8 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_nogvo")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7lk56"]
+diffuse_mode = 3
+specular_mode = 1
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_odate"]
 _surfaces = [{
@@ -810,16 +825,37 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_odate")
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_xarjj"]
+sky_top_color = Color(0.243137, 0.294118, 0.364706, 1)
+sky_horizon_color = Color(0.858824, 0.556863, 0.6, 1)
+sky_curve = 0.270375
+sky_energy_multiplier = 2.0
+ground_bottom_color = Color(0.0156863, 0.196078, 0.270588, 1)
+ground_horizon_color = Color(1, 0.207843, 0.203922, 1)
+ground_curve = 0.32
+ground_energy_multiplier = 2.0
+
+[sub_resource type="Sky" id="Sky_7uepp"]
+sky_material = SubResource("ProceduralSkyMaterial_xarjj")
+
 [sub_resource type="Environment" id="Environment_7x4m6"]
-background_mode = 1
-background_color = Color(0.192157, 0.176471, 0.27451, 1)
+background_mode = 2
+background_color = Color(0.168627, 0.192157, 0.235294, 1)
 background_energy_multiplier = 0.73
-background_intensity = 0.0
+background_intensity = 0.4
+sky = SubResource("Sky_7uepp")
+tonemap_mode = 3
+tonemap_exposure = 3.05
+fog_enabled = true
+fog_light_color = Color(0.403922, 0.611765, 0.662745, 1)
+fog_light_energy = 0.04
+fog_density = 0.0
+fog_height_density = -0.1709
 
 [node name="Cena" type="Node3D"]
 
 [node name="rose" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0270884, 1.19209e-07, -0.777325)
+transform = Transform3D(0.975989, 0, -0.21782, 0, 1, 0, 0.21782, 0, 0.975989, -0.0629206, 0, 0.32506)
 
 [node name="paredes" type="MeshInstance3D" parent="rose"]
 mesh = SubResource("ArrayMesh_pcy0l")
@@ -886,7 +922,7 @@ mesh = SubResource("ArrayMesh_k1xgw")
 skeleton = NodePath("")
 
 [node name="Cadeira Simples" type="MeshInstance3D" parent="rose"]
-transform = Transform3D(1.94707e-07, 0, 1.12, 0, 0.929, 0, -1, 0, 2.18072e-07, 1.69278, -0.00427556, -0.488997)
+transform = Transform3D(1.96654e-07, 0, 1.133, 0, 0.937, 0, -1.01, 0, 2.20603e-07, 1.69278, -0.00427556, -0.488997)
 mesh = SubResource("ArrayMesh_q3xbt")
 skeleton = NodePath("")
 
@@ -924,9 +960,9 @@ skeleton = NodePath("")
 environment = SubResource("Environment_7x4m6")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.129817, 0.531088, -0.837313, -0.081368, 0.847317, 0.524818, 0.988194, -7.5395e-09, 0.15321, -10.0634, 5.18286, 0)
+transform = Transform3D(-0.0885481, 0.518336, -0.85058, -0.081368, 0.847317, 0.524818, 0.992743, 0.115682, -0.0328524, -10.0276, 5.18286, -1.10238)
 light_intensity_lux = 10.0
-light_color = Color(0.278431, 0.313726, 0.470588, 1)
+light_color = Color(0.384314, 0.101961, 0.741176, 1)
 light_energy = 0.158
 light_indirect_energy = 0.0
 light_volumetric_fog_energy = 0.0
@@ -934,9 +970,9 @@ light_angular_distance = 4.74
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.42485, 3.83357, -0.292228)
-light_intensity_lumens = 100.0
+light_intensity_lumens = 200.0
 light_temperature = 5000.0
-light_color = Color(0.172549, 0.333333, 0.266667, 1)
+light_color = Color(0.392157, 0.270588, 0, 1)
 light_size = 0.132
 omni_range = 10.089
 omni_attenuation = 0.933033
@@ -945,6 +981,6 @@ omni_attenuation = 0.933033
 transform = Transform3D(1.1, 0, 0, 0, 1.2, 0, 0, 0, 1.1, 2.08872, -8.34465e-07, -0.194402)
 
 [node name="Camera" type="Camera3D" parent="."]
-transform = Transform3D(0.983885, -0.0752821, 0.162181, 0, 0.907044, 0.421036, -0.178802, -0.414251, 0.892427, -1.018, 8.888, 11.76)
-fov = 43.6
+transform = Transform3D(1, 0, 0, 0, 0.766044, 0.642788, 0, -0.642788, 0.766044, 1.652, 18.478, 9.252)
+fov = 28.8
 script = ExtResource("5_7vkq0")

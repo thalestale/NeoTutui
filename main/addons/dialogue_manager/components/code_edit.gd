@@ -7,9 +7,6 @@ signal error_clicked(line_number: int)
 signal external_file_requested(path: String, title: String)
 
 
-const DialogueParser = preload("res://addons/dialogue_manager/components/parser.gd")
-
-
 # A link back to the owner MainView
 var main_view
 
@@ -35,6 +32,7 @@ var colors: Dictionary:
 		syntax_highlighter.add_keyword_color("if", colors.conditions)
 		syntax_highlighter.add_keyword_color("elif", colors.conditions)
 		syntax_highlighter.add_keyword_color("else", colors.conditions)
+		syntax_highlighter.add_keyword_color("while", colors.conditions)
 		syntax_highlighter.add_keyword_color("endif", colors.conditions)
 		syntax_highlighter.add_keyword_color("in", colors.conditions)
 		syntax_highlighter.add_keyword_color("and", colors.conditions)
@@ -150,7 +148,7 @@ func _request_code_completion(force: bool) -> void:
 				add_code_completion_option(CodeEdit.KIND_CLASS, "END!", "END!".substr(prompt.length()), colors.text, get_theme_icon("Stop", "EditorIcons"))
 		
 		# Get all titles, including those in imports
-		var parser = DialogueParser.new()
+		var parser: DialogueManagerParser = DialogueManagerParser.new()
 		parser.prepare(text, false)
 		for title in parser.titles:
 			if "/" in title:

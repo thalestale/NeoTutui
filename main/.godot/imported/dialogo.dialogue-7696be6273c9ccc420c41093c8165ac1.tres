@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_yw5t3"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_3lyqy"]
 
 [resource]
-script = ExtResource("1_yw5t3")
-metadata/dialogue_manager_version = "2.8.12"
+script = ExtResource("1_3lyqy")
+metadata/dialogue_manager_version = "2.11.1"
 metadata/titles = {
 "abc": "3"
 }

@@ -38,7 +38,7 @@ DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 
 [dialogue_manager]
 
-states=["Som"]
+general/states=["Som"]
 
 [display]
 
@@ -86,5 +86,6 @@ lights_and_shadows/directional_shadow/soft_shadow_filter_quality=0
 lights_and_shadows/positional_shadow/soft_shadow_filter_quality=0
 environment/ssao/quality=0
 environment/ssil/quality=0
+anti_aliasing/screen_space_roughness_limiter/enabled=false
 environment/glow/upscale_mode=0
 environment/volumetric_fog/use_filter=0
