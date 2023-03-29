@@ -1,6 +1,5 @@
 res://core/default_bus_layout.tres
 res://cenas/Parte1/Rose/Rose.tscn
 res://asset/material/outline.tres
-res://cenas/Parte1/Rose/Rose.gdshader
 res://Boot.tscn
 res://asset/player/Player.tscn
