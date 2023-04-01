@@ -1,5 +1,6 @@
-[gd_scene load_steps=68 format=3 uid="uid://c30lyygi4wtnf"]
+[gd_scene load_steps=69 format=3 uid="uid://c30lyygi4wtnf"]
 
+[ext_resource type="Script" path="res://cenas/Parte1/Rose/Rose.gd" id="1_e1efa"]
 [ext_resource type="Texture2D" uid="uid://c14oei3chfcbt" path="res://cenas/Parte1/Rose/Blend/textures/Untitled.001.png" id="1_vtgis"]
 [ext_resource type="Texture2D" uid="uid://c5628rqm0o1h4" path="res://cenas/Parte1/Rose/Blend/textures/Untitled.004.png" id="2_rc54i"]
 [ext_resource type="Texture2D" uid="uid://bepi1yaoyopvv" path="res://cenas/Parte1/Rose/Blend/textures/Untitled.003.png" id="3_5ndl3"]
@@ -7,19 +8,17 @@
 [ext_resource type="Script" path="res://core/Camera.gd" id="5_7vkq0"]
 [ext_resource type="Shader" path="res://cenas/Parte1/Rose/Rose.gdshader" id="6_esal3"]
 
-[sub_resource type="Gradient" id="Gradient_667ep"]
-offsets = PackedFloat32Array(0.183857, 0.520179, 0.816144)
-colors = PackedColorArray(0, 0, 0, 1, 0.575446, 0.725972, 1, 1, 0.991421, 0.785414, 0.622716, 1)
+[sub_resource type="Gradient" id="Gradient_geagq"]
+offsets = PackedFloat32Array(0, 0.197309, 0.38565, 0.654709)
+colors = PackedColorArray(0, 0, 0, 1, 0.270829, 0.266325, 0.242415, 1, 0.466046, 0.342084, 0.200331, 1, 1, 1, 1, 1)
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_uvwkh"]
-gradient = SubResource("Gradient_667ep")
-fill_from = Vector2(0, 0.105413)
-fill_to = Vector2(0.997151, 0)
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_6jg8d"]
+gradient = SubResource("Gradient_geagq")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ltf64"]
 shader = ExtResource("6_esal3")
-shader_parameter/num_colors = 3
-shader_parameter/PALETTE_TEXTURE = SubResource("GradientTexture2D_uvwkh")
+shader_parameter/num_colors = 6
+shader_parameter/PALETTE_TEXTURE = SubResource("GradientTexture1D_6jg8d")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_twodt"]
 resource_name = "Tijolo"
@@ -854,39 +853,62 @@ ground_energy_multiplier = 2.0
 sky_material = SubResource("ProceduralSkyMaterial_xarjj")
 
 [sub_resource type="Environment" id="Environment_7x4m6"]
-background_mode = 2
-background_color = Color(0.168627, 0.192157, 0.235294, 1)
-background_energy_multiplier = 0.73
-background_intensity = 0.4
+background_mode = 1
+background_color = Color(0.168627, 0.192157, 0.235294, 0)
+background_energy_multiplier = 0.0
+background_intensity = 0.0
 sky = SubResource("Sky_7uepp")
 tonemap_mode = 3
-tonemap_exposure = 1.71
-tonemap_white = 0.29
-fog_light_color = Color(0.403922, 0.611765, 0.662745, 1)
-fog_light_energy = 0.04
+tonemap_exposure = 6.32
+tonemap_white = 0.94
+fog_light_color = Color(0, 0.67451, 0.490196, 1)
+fog_light_energy = 0.05
 fog_density = 0.0
 fog_height_density = -0.1709
 
-[sub_resource type="Gradient" id="Gradient_gaega"]
-colors = PackedColorArray(6.257e-07, 0.407779, 0.453687, 1, 0.522771, 3.36915e-07, 0.308226, 1)
+[sub_resource type="Gradient" id="Gradient_xh41t"]
+offsets = PackedFloat32Array(0, 0.129555, 0.174089, 0.417004, 0.562753)
+colors = PackedColorArray(1, 1, 1, 1, 0.195965, 0.381467, 0.161035, 1, 0.411067, 0.295827, 0.198718, 1, 0.351333, 0.277567, 0.494376, 1, 0, 0.102357, 0.119497, 1)
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_1gxh1"]
-gradient = SubResource("Gradient_gaega")
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_bmc15"]
+noise_type = 0
+seed = 5
+fractal_octaves = 6
+fractal_lacunarity = 0.794
+fractal_gain = 0.871
+fractal_weighted_strength = 1.0
+fractal_ping_pong_strength = 2.055
+cellular_jitter = -0.193
+cellular_return_type = 0
+domain_warp_enabled = true
+domain_warp_type = 2
+domain_warp_amplitude = 30.045
+domain_warp_frequency = 0.023
+domain_warp_fractal_type = 2
+domain_warp_fractal_octaves = 1
+domain_warp_fractal_lacunarity = 5.343
+domain_warp_fractal_gain = 0.399
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_d667c"]
-shader = ExtResource("6_esal3")
-shader_parameter/num_colors = 16
-shader_parameter/PALETTE_TEXTURE = SubResource("GradientTexture2D_1gxh1")
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_piit7"]
+height = 484
+seamless = true
+as_normal_map = true
+bump_strength = 6.9
+color_ramp = SubResource("Gradient_xh41t")
+noise = SubResource("FastNoiseLite_bmc15")
 
 [node name="Control" type="Control"]
 top_level = true
 clip_children = 1
+texture_filter = 6
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("1_e1efa")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+texture_filter = 6
 material = SubResource("ShaderMaterial_ltf64")
 layout_mode = 0
 offset_right = 1280.0
@@ -895,6 +917,8 @@ metadata/_edit_use_anchors_ = true
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
 handle_input_locally = false
+msaa_3d = 1
+canvas_item_default_texture_filter = 2
 size = Vector2i(1280, 720)
 render_target_update_mode = 4
 
@@ -1007,12 +1031,12 @@ environment = SubResource("Environment_7x4m6")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewportContainer/SubViewport/Cena"]
 transform = Transform3D(-0.0885481, 0.518336, -0.85058, -0.081368, 0.847317, 0.524818, 0.992743, 0.115682, -0.0328524, -10.0276, 5.18286, -1.10238)
-light_intensity_lux = 10.0
+light_intensity_lux = 7.0
 light_color = Color(0.384314, 0.101961, 0.741176, 1)
 light_energy = 0.158
 light_indirect_energy = 0.0
 light_volumetric_fog_energy = 0.0
-light_angular_distance = 4.74
+light_angular_distance = 42.94
 
 [node name="OmniLight3D" type="OmniLight3D" parent="SubViewportContainer/SubViewport/Cena"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.42485, 3.83357, -0.292228)
@@ -1027,15 +1051,19 @@ omni_attenuation = 0.933033
 transform = Transform3D(1.1, 0, 0, 0, 1.2, 0, 0, 0, 1.1, 2.08872, -8.34465e-07, -0.194402)
 
 [node name="Camera" type="Camera3D" parent="SubViewportContainer/SubViewport/Cena"]
-transform = Transform3D(1, 0, 0, 0, 0.766044, 0.642788, 0, -0.642788, 0.766044, 1.652, 18.478, 9.252)
-fov = 28.8
+transform = Transform3D(1, 0, 0, 0, 0.766044, 0.642788, 0, -0.642788, 0.766044, 1.652, 54, 27)
+fov = 14.0
+size = 13.89
 script = ExtResource("5_7vkq0")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-visible = false
-top_level = true
-material = SubResource("ShaderMaterial_d667c")
-layout_mode = 2
-offset_right = 2000.0
-offset_bottom = 2000.0
-color = Color(0.698039, 0.698039, 0.698039, 1)
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+layer = -107
+scale = Vector2(1.171, 1.171)
+transform = Transform2D(1.171, 0, 0, 1.171, 0, 0)
+follow_viewport_enabled = true
+
+[node name="ColorRect2" type="TextureRect" parent="ParallaxBackground"]
+modulate = Color(0.223529, 0.223529, 0.223529, 1)
+offset_right = 1207.0
+offset_bottom = 702.0
+texture = SubResource("NoiseTexture2D_piit7")
