@@ -11,7 +11,7 @@ default_font_size = 24
 
 [sub_resource type="Theme" id="Theme_owda0"]
 default_font = ExtResource("3_roce2")
-default_font_size = 32
+default_font_size = 53
 
 [sub_resource type="Theme" id="Theme_fakos"]
 default_font_size = 9
@@ -41,10 +41,10 @@ texture = ExtResource("2_3qdtx")
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_left = 19.0
-offset_top = 15.0
-offset_right = 19.0
-offset_bottom = 122.0
+offset_left = 30.0
+offset_top = 30.0
+offset_right = 33.0
+offset_bottom = 158.0
 grow_horizontal = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 10
@@ -67,8 +67,15 @@ fit_content = true
 scroll_active = false
 
 [node name="DialogueLabel" parent="Balloon/Margin/VBox" instance=ExtResource("2_a8ve6")]
+texture_filter = 6
 layout_mode = 2
 theme = SubResource("Theme_owda0")
+theme_override_colors/font_shadow_color = Color(0.384314, 0.258824, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/shadow_outline_size = 1
+theme_override_constants/outline_size = 4
 text = "Dialogue"
 
 [node name="Responses" type="VBoxContainer" parent="Balloon/Margin/VBox"]

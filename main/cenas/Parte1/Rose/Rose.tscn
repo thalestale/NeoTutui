@@ -904,24 +904,34 @@ top_level = true
 clip_children = 1
 texture_filter = 6
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 script = ExtResource("1_e1efa")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="."]
 texture_filter = 6
+texture_repeat = 3
 material = SubResource("ShaderMaterial_ltf64")
-layout_mode = 0
-offset_right = 1280.0
-offset_bottom = 720.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
 handle_input_locally = false
-msaa_3d = 1
+snap_2d_transforms_to_pixel = true
+snap_2d_vertices_to_pixel = true
+msaa_3d = 2
 canvas_item_default_texture_filter = 2
-size = Vector2i(1280, 720)
+size = Vector2i(1920, 1080)
 render_target_update_mode = 4
 
 [node name="Cena" type="Node3D" parent="SubViewportContainer/SubViewport"]
@@ -1072,9 +1082,13 @@ follow_viewport_enabled = true
 
 [node name="ColorRect2" type="TextureRect" parent="ParallaxBackground"]
 modulate = Color(0.223529, 0.223529, 0.223529, 1)
-offset_right = 1207.0
-offset_bottom = 702.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = SubResource("NoiseTexture2D_piit7")
+expand_mode = 2
 
 [connection signal="body_entered" from="SubViewportContainer/SubViewport/Cena/rose/porta/Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_exited" from="SubViewportContainer/SubViewport/Cena/rose/porta/Area3D" to="." method="_on_area_3d_body_exited"]

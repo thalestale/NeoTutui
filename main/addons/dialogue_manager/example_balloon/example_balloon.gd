@@ -26,6 +26,8 @@ var dialogue_line: DialogueLine:
 		is_waiting_for_input = false
 		
 		if not next_dialogue_line:
+			Anima.FECHA($Balloon, "mute")
+			await get_tree().create_timer(0.2).timeout
 			queue_free()
 			return
 		
@@ -58,6 +60,7 @@ var dialogue_line: DialogueLine:
 				responses_menu.add_child(item)
 		
 		# Show our balloon
+		
 		balloon.show()
 		will_hide_balloon = false
 		
@@ -102,7 +105,7 @@ func start(dialogue_resource: DialogueResource, title: String, extra_game_states
 	resource = dialogue_resource
 	
 	self.dialogue_line = await resource.get_next_dialogue_line(title, temporary_game_states)
-
+	Anima.ABRE($Balloon, "mute")
 
 ## Go to the next line
 func next(next_id: String) -> void:
