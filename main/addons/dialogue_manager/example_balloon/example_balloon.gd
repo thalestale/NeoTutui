@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 
-@onready var balloon: ColorRect = $Balloon
+@onready var balloon: TextureRect = $Balloon
 @onready var margin: MarginContainer = $Balloon/Margin
 @onready var character_label: RichTextLabel = $Balloon/Margin/VBox/CharacterLabel
 @onready var dialogue_label := $Balloon/Margin/VBox/DialogueLabel
@@ -85,7 +85,7 @@ var dialogue_line: DialogueLine:
 func _ready() -> void:
 	response_template.hide()
 	balloon.hide()
-	balloon.custom_minimum_size.x = balloon.get_viewport_rect().size.x - 500
+	balloon.custom_minimum_size.x = balloon.get_viewport_rect().size.x / 1.618
 	
 	Engine.get_singleton("DialogueManager").mutated.connect(_on_mutated)
 
@@ -160,11 +160,11 @@ func handle_resize() -> void:
 		call_deferred("handle_resize")
 		return
 		
-	balloon.custom_minimum_size.y = margin.size.y
+	balloon.custom_minimum_size.y = (balloon.custom_minimum_size.x / 1.618) / 1.618 / 1.618
 	# Force a resize on only the height
 	balloon.size.y = 0
 	var viewport_size = balloon.get_viewport_rect().size
-	balloon.global_position = Vector2((viewport_size.x - balloon.size.x) * 0.5, viewport_size.y - balloon.size.y)
+	balloon.global_position = Vector2((viewport_size.x - balloon.size.x) * 0.5, viewport_size.y - balloon.size.y - 20)
 
 
 ### Signals

@@ -1,7 +1,7 @@
+TextureRect
 CollisionShape3D
 Area3D
 AudioStreamPlayer
-TextureRect
 ColorRect
 ParallaxBackground
 Node2D

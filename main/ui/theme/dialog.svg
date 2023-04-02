@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="700"
-   height="200"
-   viewBox="0 0 185.20834 52.916667"
+   width="715"
+   height="215"
+   viewBox="0 0 189.17709 56.885417"
    version="1.1"
    id="svg5"
    inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
@@ -24,13 +24,13 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="1.0313969"
-     inkscape:cx="373.76495"
-     inkscape:cy="150.76641"
+     inkscape:zoom="1.3133521"
+     inkscape:cx="348.34527"
+     inkscape:cy="151.13997"
      inkscape:window-width="1280"
-     inkscape:window-height="736"
+     inkscape:window-height="744"
      inkscape:window-x="0"
-     inkscape:window-y="27"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:current-layer="g1696" />
   <defs
@@ -43,21 +43,21 @@
        id="g1696"
        transform="translate(39.747416,0.16813916)">
       <rect
-         style="fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:0.52916667;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         style="fill:#575757;fill-opacity:1;stroke:#585858;stroke-width:1.429;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+         id="rect7841"
+         width="180.9227"
+         height="51.046768"
+         x="-34.134983"
+         y="4.0011826"
+         ry="3.9327567" />
+      <rect
+         style="fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:1.429;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
          id="rect234"
          width="180.9227"
          height="51.046768"
-         x="-37.664902"
-         y="0.77050084"
+         x="-37.89262"
+         y="1.2870274"
          ry="3.9327567" />
-      <rect
-         style="fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:0.537722;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
-         id="rect7591"
-         width="178.21648"
-         height="48.086132"
-         x="-36.396465"
-         y="2.3035252"
-         ry="3.8695247" />
     </g>
   </g>
 </svg>
