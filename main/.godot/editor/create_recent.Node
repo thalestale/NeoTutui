@@ -1,3 +1,6 @@
+CollisionShape3D
+Area3D
+AudioStreamPlayer
 TextureRect
 ColorRect
 ParallaxBackground
@@ -12,9 +15,6 @@ Camera3D
 OmniLight3D
 DirectionalLight3D
 WorldEnvironment
-AudioStreamPlayer
-CollisionShape3D
-Area3D
 GPUParticles3D
 CPUParticles3D
 AnimatableBody3D

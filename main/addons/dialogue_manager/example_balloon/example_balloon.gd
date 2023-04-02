@@ -85,7 +85,7 @@ var dialogue_line: DialogueLine:
 func _ready() -> void:
 	response_template.hide()
 	balloon.hide()
-	balloon.custom_minimum_size.x = balloon.get_viewport_rect().size.x
+	balloon.custom_minimum_size.x = balloon.get_viewport_rect().size.x - 500
 	
 	Engine.get_singleton("DialogueManager").mutated.connect(_on_mutated)
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=3 uid="uid://c30lyygi4wtnf"]
+[gd_scene load_steps=70 format=3 uid="uid://c30lyygi4wtnf"]
 
 [ext_resource type="Script" path="res://cenas/Parte1/Rose/Rose.gd" id="1_e1efa"]
 [ext_resource type="Texture2D" uid="uid://c14oei3chfcbt" path="res://cenas/Parte1/Rose/Blend/textures/Untitled.001.png" id="1_vtgis"]
@@ -266,6 +266,8 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ek1yj")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_r8yxm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hj7vw"]
 resource_name = "Madeira Piso"
@@ -956,6 +958,12 @@ transform = Transform3D(0, 0, -1, -1, 0, 0, 0, 1, 0, -1.7808, 1.69532, -2.16551)
 mesh = SubResource("ArrayMesh_uk2ux")
 skeleton = NodePath("")
 
+[node name="Area3D" type="Area3D" parent="SubViewportContainer/SubViewport/Cena/rose/porta"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewportContainer/SubViewport/Cena/rose/porta/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, -8.9407e-08, 0, 8.9407e-08, 1, 0.735072, 0.724189, -0.161623)
+shape = SubResource("BoxShape3D_r8yxm")
+
 [node name="chao" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/Cena/rose"]
 transform = Transform3D(4.55575, 0, 0, 0, 1, 0, 0, 0, 2.24591, 0, 0, 0)
 mesh = SubResource("ArrayMesh_h605d")
@@ -1067,3 +1075,6 @@ modulate = Color(0.223529, 0.223529, 0.223529, 1)
 offset_right = 1207.0
 offset_bottom = 702.0
 texture = SubResource("NoiseTexture2D_piit7")
+
+[connection signal="body_entered" from="SubViewportContainer/SubViewport/Cena/rose/porta/Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="SubViewportContainer/SubViewport/Cena/rose/porta/Area3D" to="." method="_on_area_3d_body_exited"]

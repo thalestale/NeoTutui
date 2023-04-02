@@ -8,6 +8,8 @@ func Tocar(musica : String, transicao : float) -> void:
 	#baixa o volume da musica que tava tocando antes
 	if MusicaAnterior == $Luneta:
 		MusicaAnteriorString = "LUNETA"
+	elif MusicaAnterior == $Rose:
+		MusicaAnteriorString = "ROSE"
 	else:
 		pass
 		
@@ -21,6 +23,8 @@ func Tocar(musica : String, transicao : float) -> void:
 	match musica:
 		"LUNETA":
 			NodeMusica = $Luneta
+		"ROSE":
+			NodeMusica = $Rose
 		
 	#comeca a tocar a musica --------------------------------------------------
 	NodeMusica.volume_db = -80.0 #volume minimo antes de tocar

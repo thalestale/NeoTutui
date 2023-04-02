@@ -7,7 +7,7 @@
 default_font_size = 9
 
 [sub_resource type="Theme" id="Theme_owda0"]
-default_font_size = 9
+default_font_size = 16
 
 [sub_resource type="Theme" id="Theme_fakos"]
 default_font_size = 9
@@ -37,7 +37,10 @@ color = Color(0, 0, 0, 1)
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 75.0
+offset_left = 1.0
+offset_top = 3.0
+offset_right = 64.0
+offset_bottom = 203.0
 grow_horizontal = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 10
