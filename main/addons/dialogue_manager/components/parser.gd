@@ -18,8 +18,8 @@ var REPLACEMENTS_REGEX: RegEx = RegEx.create_from_string("{{(.*?)}}")
 var GOTO_REGEX: RegEx = RegEx.create_from_string("=><? (?<jump_to_title>.*)")
 
 var TOKEN_DEFINITIONS: Dictionary = {
-	DialogueConstants.TOKEN_FUNCTION: RegEx.create_from_string("^[a-zA-Z_][a-zA-Z_0-9]+\\("),
-	DialogueConstants.TOKEN_DICTIONARY_REFERENCE: RegEx.create_from_string("^[a-zA-Z_][a-zA-Z_0-9]+\\["),
+	DialogueConstants.TOKEN_FUNCTION: RegEx.create_from_string("^[a-zA-Z_][a-zA-Z_0-9]*\\("),
+	DialogueConstants.TOKEN_DICTIONARY_REFERENCE: RegEx.create_from_string("^[a-zA-Z_][a-zA-Z_0-9]*\\["),
 	DialogueConstants.TOKEN_PARENS_OPEN: RegEx.create_from_string("^\\("),
 	DialogueConstants.TOKEN_PARENS_CLOSE: RegEx.create_from_string("^\\)"),
 	DialogueConstants.TOKEN_BRACKET_OPEN: RegEx.create_from_string("^\\["),
@@ -229,11 +229,13 @@ func parse(text: String) -> Error:
 			line["next_id_after"] = find_next_line_after_conditions(id)
 			var next_sibling_id = find_next_condition_sibling(id)
 			line["next_conditional_id"] = next_sibling_id if is_valid_id(next_sibling_id) else line.next_id_after
+			
 		elif is_condition_line(raw_line, true):
 			parent_stack.append(str(id))
 			line["type"] = DialogueConstants.TYPE_CONDITION
 			line["next_id_after"] = find_next_line_after_conditions(id)
 			line["next_conditional_id"] = line["next_id_after"]
+			
 		elif is_while_condition_line(raw_line):
 			parent_stack.append(str(id))
 			line["type"] = DialogueConstants.TYPE_CONDITION
@@ -598,7 +600,7 @@ func apply_weighted_random(id: int, raw_line: String, indent_size: int, line: Di
 	var original_random_line: Dictionary = {}
 	for i in range(id, 0, -1):
 		if not raw_lines[i].strip_edges().begins_with("%") or get_indent(raw_lines[i]) != indent_size:
-			continue
+			break
 		elif parsed_lines.has(str(i)) and parsed_lines[str(i)].has("siblings"):
 			original_random_line = parsed_lines[str(i)]
 	
@@ -880,6 +882,8 @@ func extract_mutation(line: String) -> Dictionary:
 
 
 func extract_condition(raw_line: String, is_wrapped: bool = false) -> Dictionary:
+	raw_line = raw_line.strip_edges().trim_suffix(":")
+	
 	var condition := {}
 	
 	var regex = WRAPPED_CONDITION_REGEX if is_wrapped else CONDITION_REGEX

@@ -1,15 +1,15 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_bcyh6"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_btedk"]
 
 [resource]
-script = ExtResource("1_bcyh6")
-metadata/dialogue_manager_version = "2.11.1"
-metadata/titles = {
+script = ExtResource("1_btedk")
+titles = {
 "abc": "3"
 }
-metadata/first_title = "3"
-metadata/lines = {
+character_names = PackedStringArray("Thales")
+first_title = "3"
+lines = {
 "1": {
 "next_id": "3",
 "text": "abc",
@@ -34,3 +34,4 @@ metadata/lines = {
 "type": "dialogue"
 }
 }
+metadata/dialogue_manager_version = "2.13.2"

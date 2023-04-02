@@ -1051,8 +1051,8 @@ omni_attenuation = 0.933033
 transform = Transform3D(1.1, 0, 0, 0, 1.2, 0, 0, 0, 1.1, 2.08872, -8.34465e-07, -0.194402)
 
 [node name="Camera" type="Camera3D" parent="SubViewportContainer/SubViewport/Cena"]
-transform = Transform3D(1, 0, 0, 0, 0.766044, 0.642788, 0, -0.642788, 0.766044, 1.652, 54, 27)
-fov = 14.0
+transform = Transform3D(1, 0, 0, 0, 0.766044, 0.642788, 0, -0.642788, 0.766044, 0.98, 53.743, 32.485)
+fov = 12.0
 size = 13.89
 script = ExtResource("5_7vkq0")
 
