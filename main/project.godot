@@ -42,8 +42,8 @@ general/states=["Som"]
 
 [display]
 
-window/size/viewport_width=1920
-window/size/viewport_height=1080
+window/size/viewport_width=1280
+window/size/viewport_height=720
 window/size/resizable=false
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
@@ -52,7 +52,7 @@ window/stretch/aspect="expand"
 
 movie_writer/mix_rate=44000
 movie_writer/mjpeg_quality=0.99
-movie_writer/movie_file="C:/Users/vladf/OneDrive/Documentos/Godot/cap.avi"
+movie_writer/movie_file="/home/bumba/Desktop/Tutui/NeoTutui/cap.avi"
 node_naming/name_num_separator=2
 scene/scene_naming=1
 

@@ -861,8 +861,7 @@ background_energy_multiplier = 0.0
 background_intensity = 0.0
 sky = SubResource("Sky_7uepp")
 tonemap_mode = 3
-tonemap_exposure = 6.32
-tonemap_white = 0.94
+tonemap_exposure = 3.0
 fog_light_color = Color(0, 0.67451, 0.490196, 1)
 fog_light_energy = 0.05
 fog_density = 0.0
@@ -882,7 +881,6 @@ fractal_weighted_strength = 1.0
 fractal_ping_pong_strength = 2.055
 cellular_jitter = -0.193
 cellular_return_type = 0
-domain_warp_enabled = true
 domain_warp_type = 2
 domain_warp_amplitude = 30.045
 domain_warp_frequency = 0.023
@@ -907,6 +905,8 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -1280.0
+offset_bottom = -720.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
@@ -917,10 +917,13 @@ script = ExtResource("1_e1efa")
 texture_filter = 6
 texture_repeat = 3
 material = SubResource("ShaderMaterial_ltf64")
+layout_direction = 1
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 1280.0
+offset_bottom = 720.0
 grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
@@ -931,7 +934,7 @@ snap_2d_transforms_to_pixel = true
 snap_2d_vertices_to_pixel = true
 msaa_3d = 2
 canvas_item_default_texture_filter = 2
-size = Vector2i(1920, 1080)
+size = Vector2i(1280, 720)
 render_target_update_mode = 4
 
 [node name="Cena" type="Node3D" parent="SubViewportContainer/SubViewport"]
@@ -1076,17 +1079,17 @@ script = ExtResource("5_7vkq0")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 layer = -107
-scale = Vector2(1.171, 1.171)
-transform = Transform2D(1.171, 0, 0, 1.171, 0, 0)
 follow_viewport_enabled = true
 
 [node name="ColorRect2" type="TextureRect" parent="ParallaxBackground"]
-modulate = Color(0.223529, 0.223529, 0.223529, 1)
+self_modulate = Color(0.623529, 0.643137, 0.627451, 1)
+texture_filter = 6
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 3
 texture = SubResource("NoiseTexture2D_piit7")
 expand_mode = 2
 

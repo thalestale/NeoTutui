@@ -5,6 +5,7 @@ var title : String = "abc"
 var playercogu : bool = false
 
 func _ready() -> void:
+	Mouse.OFF()
 	MUSICA.Tocar("ROSE", 1.5)
 	get_tree().create_tween().tween_property($ParallaxBackground/ColorRect2, "texture:noise:fractal_lacunarity", 3.00, 20.00)
 

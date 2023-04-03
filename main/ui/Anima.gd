@@ -44,7 +44,7 @@ func FECHA(alvo: Object, argumento: String) -> void: #fecha janela
 	await get_tree().create_tween().tween_property(alvo, 
 			"scale", 
 			Vector2(1.0, 0.01),
-			0.15).set_trans(Tween.TRANS_BACK).from_current().finished
+			0.15).set_trans(Tween.TRANS_CIRC).from_current().finished
 	
 	if argumento == "mute":
 		pass
@@ -53,8 +53,8 @@ func FECHA(alvo: Object, argumento: String) -> void: #fecha janela
 	
 	await get_tree().create_tween().tween_property(alvo, 
 			"scale", 
-			Vector2(0.0, 0.01),
-			0.15).set_trans(Tween.TRANS_BACK).from_current().finished
+			Vector2(0.1, 0.03),
+			0.15).set_trans(Tween.TRANS_CIRC).from_current().finished
 	
 #---------------------------------------------------------------------------------------------------
 func FUNDO(alvo : Object) -> void:

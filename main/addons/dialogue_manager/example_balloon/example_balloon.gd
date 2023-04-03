@@ -27,7 +27,7 @@ var dialogue_line: DialogueLine:
 		
 		if not next_dialogue_line:
 			Anima.FECHA($Balloon, "mute")
-			await get_tree().create_timer(0.2).timeout
+			await get_tree().create_timer(0.4).timeout
 			queue_free()
 			return
 		
