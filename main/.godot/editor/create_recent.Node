@@ -1,8 +1,8 @@
+ColorRect
 TextureRect
 CollisionShape3D
 Area3D
 AudioStreamPlayer
-ColorRect
 ParallaxBackground
 Node2D
 SubViewportContainer

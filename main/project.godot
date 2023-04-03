@@ -13,7 +13,8 @@ config_version=5
 config/name="Neo Tutui"
 run/main_scene="res://Boot.tscn"
 config/features=PackedStringArray("4.0", "GL Compatibility")
-boot_splash/bg_color=Color(0.0941176, 0, 0.196078, 1)
+boot_splash/bg_color=Color(1, 1, 1, 1)
+boot_splash/show_image=false
 boot_splash/image="res://ui/theme/icon.png"
 boot_splash/fullsize=false
 boot_splash/use_filter=false
@@ -22,6 +23,8 @@ config/icon="res://ui/theme/icon.svg"
 [audio]
 
 buses/default_bus_layout="res://core/default_bus_layout.tres"
+driver/output_latency=12
+buses/channel_disable_time=3.0
 
 [autoload]
 
