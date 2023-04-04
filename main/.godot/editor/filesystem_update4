@@ -1,7 +1,4 @@
 res://core/default_bus_layout.tres
 res://cenas/Parte1/Rose/Rose.tscn
-res://addons/dialogue_manager/example_balloon/small_example_balloon.tscn
-res://addons/dialogue_manager/dialogue_label.tscn
-res://core/Som.tscn
-res://core/Boot.gd
-res://Boot.tscn
+res://asset/material/outline.tres
+res://core/Camera.gd

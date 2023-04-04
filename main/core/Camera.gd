@@ -31,7 +31,7 @@ func _process(_delta: float) -> void:
 		_fov_adjust(default_fov - 5)
 
 	
-func _fov_adjust(desired_fov : float) -> void:
+func _fov_adjust(_desired_fov : float) -> void:
 	#if desired_fov < default_fov:
 	#	get_tree().create_tween().tween_property(self, 
 	#		"fov", 
