@@ -67,6 +67,7 @@ var dialogue_line: DialogueLine:
 		dialogue_label.modulate.a = 1
 		if not dialogue_line.text.is_empty():
 			dialogue_label.type_out()
+			$Balloon/Margin/VBox/Sprite2D.visible = false
 			await dialogue_label.finished_typing
 		
 		# Wait for input
@@ -81,6 +82,7 @@ var dialogue_line: DialogueLine:
 			is_waiting_for_input = true
 			balloon.focus_mode = Control.FOCUS_ALL
 			balloon.grab_focus()
+			$Balloon/Margin/VBox/Sprite2D.visible = true
 	get:
 		return dialogue_line
 

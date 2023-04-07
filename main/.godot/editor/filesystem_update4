@@ -1,3 +1,6 @@
 res://core/default_bus_layout.tres
 res://cenas/Parte1/Rose/Rose.tscn
 res://asset/material/outline.tres
+res://addons/dialogue_manager/example_balloon/example_balloon.gd
+res://addons/dialogue_manager/example_balloon/small_example_balloon.tscn
+res://addons/dialogue_manager/dialogue_label.tscn
