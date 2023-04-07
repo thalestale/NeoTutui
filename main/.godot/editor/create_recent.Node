@@ -1,3 +1,5 @@
+Camera3D
+MeshInstance3D
 Sprite2D
 ColorRect
 TextureRect
@@ -10,9 +12,7 @@ SubViewportContainer
 SubViewport
 Control
 CanvasModulate
-MeshInstance3D
 Node
-Camera3D
 OmniLight3D
 DirectionalLight3D
 WorldEnvironment
@@ -30,4 +30,3 @@ AnimatedSprite2D
 Label
 LineEdit
 TextEdit
-ColorPicker
