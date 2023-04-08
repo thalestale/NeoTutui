@@ -1,0 +1,180 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v3.4.50",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0,
+                1
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "arvore_tronco"
+        },
+        {
+            "mesh" : 1,
+            "name" : "arvore_copa"
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "arvore_tronco_mesh",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1
+                    },
+                    "indices" : 2
+                }
+            ]
+        },
+        {
+            "name" : "arvore_copra_mesh",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 3,
+                        "TEXCOORD_0" : 4,
+                        "NORMAL" : 5,
+                        "TANGENT" : 6
+                    },
+                    "indices" : 7
+                }
+            ]
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 738,
+            "max" : [
+                2.510392427444458,
+                7.941132545471191,
+                2.180422067642212
+            ],
+            "min" : [
+                -2.1188998222351074,
+                -0.5176172852516174,
+                -2.0982043743133545
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 738,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5123,
+            "count" : 4416,
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5126,
+            "count" : 623,
+            "max" : [
+                4.1851606369018555,
+                10.476465225219727,
+                3.828432559967041
+            ],
+            "min" : [
+                -4.29600715637207,
+                4.777892589569092,
+                -3.6091434955596924
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 4,
+            "componentType" : 5126,
+            "count" : 623,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 5,
+            "componentType" : 5126,
+            "count" : 623,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 6,
+            "componentType" : 5126,
+            "count" : 623,
+            "type" : "VEC4"
+        },
+        {
+            "bufferView" : 7,
+            "componentType" : 5123,
+            "count" : 2706,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 8856,
+            "byteOffset" : 0,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 8856,
+            "byteOffset" : 8856,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 8832,
+            "byteOffset" : 17712,
+            "target" : 34963
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 7476,
+            "byteOffset" : 26544,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 4984,
+            "byteOffset" : 34020,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 7476,
+            "byteOffset" : 39004,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 9968,
+            "byteOffset" : 46480,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 5412,
+            "byteOffset" : 56448,
+            "target" : 34963
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 61860,
+            "uri" : "Arvore_junicablend-61e09a572956f5107baa4c6070c21865.bin"
+        }
+    ]
+}

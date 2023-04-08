@@ -1,3 +1,4 @@
+DirectionalLight3D
 Camera3D
 MeshInstance3D
 Sprite2D
@@ -14,7 +15,6 @@ Control
 CanvasModulate
 Node
 OmniLight3D
-DirectionalLight3D
 WorldEnvironment
 GPUParticles3D
 CPUParticles3D
