@@ -1,13 +1,19 @@
-[gd_scene load_steps=8 format=3 uid="uid://b361p61jmf257"]
+[gd_scene load_steps=13 format=3 uid="uid://b361p61jmf257"]
 
 [ext_resource type="Script" path="res://addons/dialogue_manager/example_balloon/example_balloon.gd" id="1_4u26j"]
+[ext_resource type="Texture2D" uid="uid://82mpg61k831t" path="res://ui/theme/dialog.svg" id="2_3qdtx"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
+[ext_resource type="FontFile" uid="uid://b747rlti6bgaw" path="res://ui/theme/font/VT323-Regular.ttf" id="3_roce2"]
+[ext_resource type="Texture2D" uid="uid://ccep2bare72e2" path="res://ui/menuprincipal/EntraNome/teclaEnter.svg" id="5_3e1eu"]
+[ext_resource type="Texture2D" uid="uid://bs244rgnc4m7p" path="res://ui/menuprincipal/EntraNome/teclaEnterPress.svg" id="6_xs0ty"]
 
 [sub_resource type="Theme" id="Theme_isg48"]
-default_font_size = 9
+default_font = ExtResource("3_roce2")
+default_font_size = 21
 
 [sub_resource type="Theme" id="Theme_owda0"]
-default_font_size = 16
+default_font = ExtResource("3_roce2")
+default_font_size = 32
 
 [sub_resource type="Theme" id="Theme_fakos"]
 default_font_size = 9
@@ -26,21 +32,31 @@ content_margin_right = 2.0
 content_margin_bottom = 2.0
 draw_center = false
 
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_3shu4"]
+frames = 2
+frame_0/texture = ExtResource("5_3e1eu")
+frame_0/duration = 0.35
+frame_1/texture = ExtResource("6_xs0ty")
+frame_1/duration = 0.35
+
 [node name="ExampleBalloon" type="CanvasLayer"]
 layer = 100
 script = ExtResource("1_4u26j")
 
-[node name="Balloon" type="ColorRect" parent="."]
-color = Color(0, 0, 0, 1)
+[node name="Balloon" type="TextureRect" parent="."]
+offset_right = 715.0
+offset_bottom = 215.0
+pivot_offset = Vector2(345, 141)
+texture = ExtResource("2_3qdtx")
 
 [node name="Margin" type="MarginContainer" parent="Balloon"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_left = 1.0
-offset_top = 3.0
-offset_right = 64.0
-offset_bottom = 203.0
+offset_left = 13.0
+offset_top = 17.0
+offset_right = -2.0
+offset_bottom = 192.0
 grow_horizontal = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 10
@@ -63,8 +79,15 @@ fit_content = true
 scroll_active = false
 
 [node name="DialogueLabel" parent="Balloon/Margin/VBox" instance=ExtResource("2_a8ve6")]
+texture_filter = 6
 layout_mode = 2
 theme = SubResource("Theme_owda0")
+theme_override_colors/font_shadow_color = Color(0.384314, 0.258824, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/shadow_outline_size = 1
+theme_override_constants/outline_size = 4
 text = "Dialogue"
 
 [node name="Responses" type="VBoxContainer" parent="Balloon/Margin/VBox"]
@@ -85,6 +108,11 @@ scroll_active = false
 shortcut_keys_enabled = false
 meta_underlined = false
 hint_underlined = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Balloon/Margin/VBox"]
+position = Vector2(712, 149)
+scale = Vector2(0.491667, 0.582237)
+texture = SubResource("AnimatedTexture_3shu4")
 
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
 [connection signal="resized" from="Balloon/Margin" to="." method="_on_margin_resized"]

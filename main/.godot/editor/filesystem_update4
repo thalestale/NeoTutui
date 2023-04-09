@@ -1,11 +1,1 @@
 res://core/default_bus_layout.tres
-res://cenas/Parte1/Rose/Rose.tscn
-res://asset/material/outline.tres
-res://asset/material/pedra.tres
-res://core/Musica.gd
-res://cenas/Parte1/Rose/Rose.gd
-res://Boot.tscn
-res://core/Musica.tscn
-res://cenas/Testes/escada.tscn
-res://core/Dialogo.gd
-res://addons/dialogue_manager/example_balloon/small_example_balloon.tscn

@@ -49,6 +49,7 @@ func _process(delta: float) -> void:
 				type_next(delta, waiting_seconds)
 		else:
 			self.is_typing = false
+		Som.PASSO()
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -67,6 +68,7 @@ func type_out() -> void:
 	visible_characters = 0
 	self.is_typing = true
 	waiting_seconds = 0
+	
 	
 	# Text isn't calculated until the next frame
 	await get_tree().process_frame

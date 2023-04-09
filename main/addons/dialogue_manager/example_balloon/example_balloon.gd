@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 
-@onready var balloon: ColorRect = $Balloon
+@onready var balloon: TextureRect = $Balloon
 @onready var margin: MarginContainer = $Balloon/Margin
 @onready var character_label: RichTextLabel = $Balloon/Margin/VBox/CharacterLabel
 @onready var dialogue_label := $Balloon/Margin/VBox/DialogueLabel
@@ -26,6 +26,8 @@ var dialogue_line: DialogueLine:
 		is_waiting_for_input = false
 		
 		if not next_dialogue_line:
+			Anima.FECHA($Balloon, "mute")
+			await get_tree().create_timer(0.4).timeout
 			queue_free()
 			return
 		
@@ -58,12 +60,14 @@ var dialogue_line: DialogueLine:
 				responses_menu.add_child(item)
 		
 		# Show our balloon
+		
 		balloon.show()
 		will_hide_balloon = false
 		
 		dialogue_label.modulate.a = 1
 		if not dialogue_line.text.is_empty():
 			dialogue_label.type_out()
+			$Balloon/Margin/VBox/Sprite2D.visible = false
 			await dialogue_label.finished_typing
 		
 		# Wait for input
@@ -78,6 +82,7 @@ var dialogue_line: DialogueLine:
 			is_waiting_for_input = true
 			balloon.focus_mode = Control.FOCUS_ALL
 			balloon.grab_focus()
+			$Balloon/Margin/VBox/Sprite2D.visible = true
 	get:
 		return dialogue_line
 
@@ -85,7 +90,7 @@ var dialogue_line: DialogueLine:
 func _ready() -> void:
 	response_template.hide()
 	balloon.hide()
-	balloon.custom_minimum_size.x = balloon.get_viewport_rect().size.x - 500
+	balloon.custom_minimum_size.x = balloon.get_viewport_rect().size.x / 1.618
 	
 	Engine.get_singleton("DialogueManager").mutated.connect(_on_mutated)
 
@@ -102,7 +107,7 @@ func start(dialogue_resource: DialogueResource, title: String, extra_game_states
 	resource = dialogue_resource
 	
 	self.dialogue_line = await resource.get_next_dialogue_line(title, temporary_game_states)
-
+	Anima.ABRE($Balloon, "mute")
 
 ## Go to the next line
 func next(next_id: String) -> void:
@@ -160,11 +165,11 @@ func handle_resize() -> void:
 		call_deferred("handle_resize")
 		return
 		
-	balloon.custom_minimum_size.y = margin.size.y
+	balloon.custom_minimum_size.y = (balloon.custom_minimum_size.x / 1.618) / 1.618 / 1.618
 	# Force a resize on only the height
 	balloon.size.y = 0
 	var viewport_size = balloon.get_viewport_rect().size
-	balloon.global_position = Vector2((viewport_size.x - balloon.size.x) * 0.5, viewport_size.y - balloon.size.y)
+	balloon.global_position = Vector2((viewport_size.x - balloon.size.x) * 0.5, viewport_size.y - balloon.size.y - 20)
 
 
 ### Signals
