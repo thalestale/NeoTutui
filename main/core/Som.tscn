@@ -41,7 +41,7 @@ random_volume_offset_db = 11.19
 stream_0/stream = ExtResource("2_h0onr")
 stream_0/weight = 1.0
 stream_1/stream = ExtResource("6_p107u")
-stream_1/weight = 1.0
+stream_1/weight = 0.0
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_aj2d6"]
 streams_count = 1

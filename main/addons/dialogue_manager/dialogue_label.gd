@@ -15,7 +15,7 @@ signal finished_typing()
 ## Automatically have a brief pause when these characters are encountered
 @export var pause_at_characters: String = "."
 
-
+var somdigitando: bool = false
 var dialogue_line: DialogueLine:
 	set(next_dialogue_line):
 		dialogue_line = next_dialogue_line
@@ -49,8 +49,13 @@ func _process(delta: float) -> void:
 				type_next(delta, waiting_seconds)
 		else:
 			self.is_typing = false
-		Som.PASSO()
-
+		
+		
+func somdigitar() -> void:
+	somdigitando = true
+	await get_tree().create_timer(0.02).timeout
+	Som.PASSO()
+	somdigitando = false
 
 func _unhandled_input(event: InputEvent) -> void:
 	if self.is_typing and visible_ratio < 1 and event.is_action_pressed(skip_action):
@@ -96,7 +101,7 @@ func type_next(delta: float, seconds_needed: float) -> void:
 	
 	# Pause on characters like "."
 	if visible_characters > 0 and get_parsed_text()[visible_characters - 1] in pause_at_characters.split():
-		additional_waiting_seconds += seconds_per_step * 15
+		additional_waiting_seconds += seconds_per_step * 10
 	
 	# Pause at literal [wait] directives
 	if last_wait_index != visible_characters and additional_waiting_seconds > 0:
@@ -112,3 +117,5 @@ func type_next(delta: float, seconds_needed: float) -> void:
 				spoke.emit(text[visible_characters - 1], visible_characters - 1, dialogue_line.get_speed(visible_characters))
 		else:
 			type_next(delta, seconds_needed)
+	if not somdigitando:
+		somdigitar()
