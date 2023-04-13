@@ -5,7 +5,7 @@ export_presets.cfg
 
 # Blender
 *.blend1
-*.txt
+*.txt*
 
 # Imported translations (automatically generated from CSV files)
 *.translation
