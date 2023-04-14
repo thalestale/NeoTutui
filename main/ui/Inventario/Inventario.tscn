@@ -1,0 +1,66 @@
+[gd_scene load_steps=5 format=3 uid="uid://br3hc6mm2c37n"]
+
+[ext_resource type="Texture2D" uid="uid://lenvyil5yeh5" path="res://ui/Inventario/Icons/ico bag.png" id="1_f8tgl"]
+[ext_resource type="Texture2D" uid="uid://dv54m7x12hb38" path="res://ui/Inventario/Icons/ico status.png" id="2_mw30x"]
+[ext_resource type="Texture2D" uid="uid://b7o5u7wh0w52i" path="res://ui/Inventario/Icons/ico settings.png" id="3_wq11q"]
+[ext_resource type="Texture2D" uid="uid://yekqntvbyfce" path="res://ui/Inventario/Icons/ico door.png" id="4_mqbvx"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -250.0
+offset_right = 250.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.609347, 0.609347)
+color = Color(0, 0, 0, 1)
+
+[node name="Sprite2D" type="TextureRect" parent="ColorRect"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 29.0
+offset_top = 61.0
+offset_right = 84.0
+offset_bottom = 116.0
+texture = ExtResource("1_f8tgl")
+
+[node name="Sprite2D2" type="TextureRect" parent="ColorRect"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 91.9017
+offset_top = 59.0796
+offset_right = 146.902
+offset_bottom = 114.08
+texture = ExtResource("2_mw30x")
+
+[node name="Sprite2D3" type="TextureRect" parent="ColorRect"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 164.11
+offset_top = 60.7207
+offset_right = 219.11
+offset_bottom = 115.721
+texture = ExtResource("3_wq11q")
+
+[node name="Sprite2D4" type="TextureRect" parent="ColorRect"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 237.96
+offset_top = 60.7208
+offset_right = 292.96
+offset_bottom = 115.721
+texture = ExtResource("4_mqbvx")

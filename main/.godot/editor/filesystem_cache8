@@ -1,5 +1,5 @@
 b4bb536c7fbe646fec36344f2ea47b2f
-::res://::1681093460
+::res://::1681431841
 Boot.tscn::PackedScene::6614395107198193413::1681073816::0::1::::<><>::res://core/Boot.gd
 export_presets.cfg::TextFile::-1::1677977955::0::1::::<><>::
 ::res://addons/::1675025179
@@ -76,12 +76,12 @@ scribbles.png::CompressedTexture2D::2812175283927716421::1672632537::1675381597:
 squares.png::CompressedTexture2D::4484147373352580222::1672632537::1675381596::1::::<><>::
 vertical.png::CompressedTexture2D::6321667921096867211::1672632537::1675381597::1::::<><>::
 ::res://asset/::1681073816
-::res://asset/material/::1681097021
-outline.tres::StandardMaterial3D::2679610664766147348::1681097021::0::1::::<><>::
+::res://asset/material/::1681427828
+outline.tres::StandardMaterial3D::2679610664766147348::1681427828::0::1::::<><>::
 pedra.tres::StandardMaterial3D::3980912229012025011::1677978049::0::1::::<><>::
-::res://asset/material/Grama/::1681073816
-colour.webp::CompressedTexture2D::8731350996760163126::1681073816::1681073816::1::::<><>::
-normal.webp::CompressedTexture2D::2462014245701387752::1681073816::1681073816::1::::<><>::
+::res://asset/material/Grama/::1681413642
+colour.webp::CompressedTexture2D::8731350996760163126::1681413609::1681413641::1::::<><>::
+normal.webp::CompressedTexture2D::2462014245701387752::1681413609::1681413642::1::::<><>::
 ::res://asset/MiscObj/::1681073816
 ::res://asset/MiscObj/Arvore Junica/::1681073816
 arvorejunica_copa_tex.webp::CompressedTexture2D::5774090718224536514::1681073816::1681073816::1::::<><>::
@@ -113,7 +113,7 @@ Inicio.blend::PackedScene::7083608748726738101::1673723561::1675381604::1::::<><
 ::res://cenas/Parte1/Rose/::1681097022
 Rose.gd::GDScript::-1::1681073816::0::1::::<>Control<>::
 Rose.gdshader::Shader::-1::1680394773::0::1::::<><>::
-Rose.tscn::PackedScene::6790450449309106059::1681073816::0::1::::<><>::res://cenas/Parte1/Rose/Rose.gd<>uid://c14oei3chfcbt<>uid://c5628rqm0o1h4<>uid://bepi1yaoyopvv<>uid://doju2kbq4wpiq<>res://core/Camera.gd<>res://cenas/Parte1/Rose/Rose.gdshader
+Rose.tscn::PackedScene::6790450449309106059::1681097022::0::1::::<><>::res://cenas/Parte1/Rose/Rose.gd<>uid://c14oei3chfcbt<>uid://c5628rqm0o1h4<>uid://bepi1yaoyopvv<>uid://doju2kbq4wpiq<>res://core/Camera.gd<>res://cenas/Parte1/Rose/Rose.gdshader
 ::res://cenas/Parte1/Rose/Blend/::1679194202
 rose.blend::PackedScene::9193971811526874005::1677964864::1677964939::1::::<><>::
 sala.blend::PackedScene::1604962833041105018::1679194202::1679194202::1::::<><>::
@@ -121,20 +121,21 @@ sala.blend::PackedScene::1604962833041105018::1679194202::1679194202::1::::<><>:
 Untitled.001.png::CompressedTexture2D::6658475901458876565::1677964864::1677964864::1::::<><>::
 Untitled.003.png::CompressedTexture2D::2698675152368926027::1677964864::1677964864::1::::<><>::
 Untitled.004.png::CompressedTexture2D::6944201595099619955::1677964864::1677964864::1::::<><>::
-::res://cenas/Testes/::1681083879
+::res://cenas/Testes/::1681427828
+campo.tscn::PackedScene::1279124059823753960::1681427828::0::1::::<><>::uid://dwnscs8vxa6oo<>uid://bbcvariqxyex1<>uid://bega2cl8qvbea<>uid://cojaovxkwbxli<>uid://doju2kbq4wpiq<>res://core/Camera.gd
 dialogo.dialogue::Resource::1472056615976355830::1681073816::1681083879::1::::<><>::res://addons/dialogue_manager/dialogue_resource.gd
 ESCADA.blend::PackedScene::2761146702546573036::1675008206::1675381605::1::::<><>::
 escada.gd::GDScript::-1::1676741800::0::1::::<>Node3D<>::
 escada.tscn::PackedScene::3887310777159518584::1677975338::0::1::::<><>::res://cenas/Testes/escada.gd<>uid://bwynbpp7gqh44<>uid://doju2kbq4wpiq<>res://core/Camera.gd
 Inicio.tscn::PackedScene::5427150690790023026::1674438440::0::1::::<><>::uid://c76mablyu2kun<>uid://doju2kbq4wpiq
-::res://core/::1681093460
+::res://core/::1681429265
 Boot.gd::GDScript::-1::1681073816::0::1::::<>Control<>::
 Camera.gd::GDScript::-1::1681073816::0::1::::<>Camera3D<>::
 ChangeScene.gd::GDScript::-1::1677192005::0::1::::<>Node<>::
 ControlesFixos.gd::GDScript::-1::1672632537::0::1::::<>Node<>::
 DATA.gd::GDScript::-1::1673655438::0::1::::<>Node<>::
 Data.tscn::PackedScene::5426286345559833397::1672632537::0::1::::<><>::res://core/DATA.gd
-default_bus_layout.tres::AudioBusLayout::4482739438696924789::1681093460::0::1::::<><>::
+default_bus_layout.tres::AudioBusLayout::4482739438696924789::1681429265::0::1::::<><>::
 Dialogo.gd::GDScript::-1::1680446920::0::1::::<>Node<>::
 janeladialogo.gd::GDScript::-1::1676741800::0::1::::<>CanvasLayer<>::
 JanelaDialogo.tscn::PackedScene::3264974879104923577::1676741800::0::1::::<><>::res://core/janeladialogo.gd<>uid://82mpg61k831t<>uid://ckvgyvclnwggo
@@ -142,12 +143,19 @@ Musica.gd::GDScript::-1::1680446920::0::1::::<>Node<>::
 Musica.tscn::PackedScene::1790462619611239514::1680446920::0::1::::<><>::res://core/Musica.gd<>uid://c86iyk2mwjg61<>uid://dwkvuq1h8ljmp
 Som.gd::GDScript::-1::1675117200::0::1::::<>Node<>::
 Som.tscn::PackedScene::4884106176573769828::1681080499::0::1::::<><>::res://core/Som.gd<>uid://cr2leixx80eqs<>uid://be01ypjecvrpx<>uid://bfqshengc15sm<>uid://h0dpvpp1fywa<>uid://bckvt3q8wgbm3<>uid://b0a7yei2esieq
-::res://ui/::1681073816
+::res://ui/::1681429417
 Anima.gd::GDScript::-1::1681073816::0::1::::<>Node<>::
 ::res://ui/cursor/::1681083881
 cursorvec.svg::CompressedTexture2D::8740031304421121034::1672632537::1681083881::1::::<><>::
 Mouse.gd::GDScript::-1::1672632537::0::1::::<>Control<>::
 Mouse.tscn::PackedScene::8079000737276771772::1672632537::0::1::::<><>::res://ui/cursor/Mouse.gd<>uid://dwr0bkxcnt0yo
+::res://ui/Inventario/::1681430022
+Inventario.tscn::PackedScene::3637863840533426045::1681430022::0::1::::<><>::uid://lenvyil5yeh5<>uid://dv54m7x12hb38<>uid://b7o5u7wh0w52i<>uid://yekqntvbyfce
+::res://ui/Inventario/Icons/::1681429436
+ico bag.png::CompressedTexture2D::781162887072228892::1681179311::1681429436::1::::<><>::
+ico door.png::CompressedTexture2D::1693426214070424460::1681179990::1681429436::1::::<><>::
+ico settings.png::CompressedTexture2D::4663223909413324470::1681180009::1681429436::1::::<><>::
+ico status.png::CompressedTexture2D::8696943039912248261::1681173113::1681429436::1::::<><>::
 ::res://ui/menuprincipal/::1681073816
 JanelaB.png::CompressedTexture2D::1701784883873390029::1672632537::1675381596::1::::<><>::
 Menu.gd::GDScript::-1::1672632537::0::1::::<>Control<>::
@@ -179,8 +187,7 @@ labelsettings_normal.tres::LabelSettings::5083883034848104703::1677978049::0::1:
 lineedit.tres::StyleBoxFlat::7043545672861350947::1677978049::0::1::::<><>::
 MainTheme.tres::Theme::7306875218389008910::1677978049::0::1::::<><>::uid://dherij6stbr2<>uid://cw25j7ox5nmie<>uid://1a06uufp3k1<>uid://t50pyuaammka<>uid://bjx52fudkc4wc<>uid://c7l7fynioi6nn
 Uroob.ttf::FontFile::6374573412170762860::1672632537::1675381596::1::::<><>::
-::res://ui/theme/font/::1681096656
-good_neighbors.fnt::::-1::0::0::0::::<><>::
+::res://ui/theme/font/::1681097089
 MartianMono-VariableFont_wdth,wght.ttf::FontFile::8500913388860635131::1669345200::1675381596::1::::<><>::
 SyneMono-Regular.ttf::FontFile::5872978909656263334::1598324400::1675381596::1::::<><>::
 VT323-Regular.ttf::FontFile::4694304544755872486::1299034800::1675381596::1::::<><>::

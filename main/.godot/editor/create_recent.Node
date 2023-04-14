@@ -1,9 +1,9 @@
-DirectionalLight3D
-Camera3D
-MeshInstance3D
+TextureRect
 Sprite2D
 ColorRect
-TextureRect
+DirectionalLight3D
+MeshInstance3D
+Camera3D
 CollisionShape3D
 Area3D
 AudioStreamPlayer
